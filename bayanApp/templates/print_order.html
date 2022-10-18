@@ -1,0 +1,310 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--section class="page-wrapper page-logo-header" -->
+<div class="container">
+<section class="page-wrapper page-logo-header">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6 col-lg-8">
+      <div class="top-sec d-flex align-items-center justify-content-center justify-content-md-start">
+        <div class="logo-wrapper mb-0 ml-3">
+          <img class="logo-pic d-block mx-auto" src="{% static 'img/logo.jpg' %}">
+        </div>
+        <div class="text-center text-md-right">
+          <h2>{% trans "Purchase Order" %}</h2>
+          <h3 class="mb-0">Purchase Order</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 text-center text-md-right mt-4 mt-md-0">
+      <div class="d-flex align-items-center align-items-md-end flex-column">
+        <p class="mb-2"><span>{% trans 'User' %} :</span> {{request.user}}</p>
+        <p class="mb-0"><span>{% trans 'Date of Day' %} :</span> {{mydate}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="container">
+  <section id="ibr-print-order" class="page-wrapper">
+    <h2 class="card-header text-center font-weight-bold text-uppercase">{{order.vendor}}</h2>
+    <div class="table-wrapper table-responsive">
+      <table class="table table-striped table-bordered table-sm text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="th-sm">{% trans "Order No" %}</th>
+            <th scope="col" class="th-sm">{% trans "Order Date" %}</th>
+            <th scope="col" class="th-sm">{% trans "Order State" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>{{order.order_no}}</td>
+          <td>{{order.order_date}}</td>
+          <td>{{order.order_state}}</td>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrapper table-responsive">
+      <table class="table table-striped table-bordered table-sm text-center">
+        <thead>
+          <tr>
+            <th scope="col" class="th-md">{% trans "Location" %}</th>
+            <th scope="col" class="th-lg">{% trans "Notes" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>{{order.location}}</td>
+          <td>{{order.notes}}</td>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-2">{% trans "Items Informations" %}</h3>
+    <div class="table-wrapper table-responsive">
+      <table id="" class="table table-striped table-bordered text-center">
+    {% if order.table_data %}
+        <thead>
+          <tr>
+            <th>{% trans "Serial" %}</th>
+            <th>{% trans "Item" %}</th>
+            <th>{% trans "Code" %}</th>
+            <th>{% trans "Description" %}</th>
+            <th>{% trans "Count" %}</th>
+            <th>{% trans "Quantity" %}</th>
+            <th>{% trans "Price" %}</th>
+            <th>{% trans "Total" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for o in order.table_data %}
+	  <!--          {% cycle o.رمز الشد %}  -->
+          <tr>
+            <td>{{o.Serial}} </td>
+            <td>{{o.Item}}</td>
+            <td>{{o.Code}}</td>
+            <td>{{o.Desc}}</td>
+            <td>{{o.Count}}</td>
+            <td>{{o.Quantity}}</td>
+            <td>{{o.Price}}</td>
+            <td>{{o.Total}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    {% elif order.image_data %}
+      <img src="{{ order.image_data.url }}" class="rounded mx-auto d-block" alt="..." width="800" height="600">
+    {% endif %}
+    </table>
+    </div>
+    <div class="action-btns">
+      <a class="btn btn-primary noprint" id="print_order">{% trans "Print Order" %}</a>
+      {% trans "Opened" as o %}
+      {% trans "Sales" as s %}
+      {% trans "Vendor" as v %}
+      {% trans "Closed" as c %}
+      {% if order.order_state == o %}
+        {% if request.user.person_type == v %}
+          <a class="btn btn-primary noprint" role="button"
+		id="delete_order_{{order.order_no}}_{{csrf_token}}_{{order.vendor.VEND_CODE}}">{% trans "Delete Order" %}
+	  </a>
+        {% elif request.user.person_type == s %}
+	<a class="btn btn-primary noprint" id="upload_order_{{order.order_no}}" data-target="#exampleModal" 
+            >{% trans "Upload Order" %}
+	  </a>
+        {% endif %}
+      {% elif order.order_state == c and order.table_data %}
+        <a class="btn btn-primary noprint" id="show_confirmed"  data-toggle="modal" data-target="#img-modal">{% trans "Show Confirmed Order" %}</a>
+      {% endif %}
+    </div>
+</div>
+<!--/div -->
+<!-- #######################################  upload confirmed order Modal ##########################   -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{% trans "Upload Confirmed Order" %}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close_modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form method="POST" action="/upload_conf_order/" enctype="multipart/form-data" id="upload_form">
+        <div class="modal-body">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-12">
+              <label class="m-0">{% trans "Order No" %}:</label>
+            </div>
+            <div class="col-12">
+              <div id="data_form">
+              </div>            
+	      {{from.errors}}
+            </div>
+	  </div>
+        </div>
+        <div class="modal-footer">
+	  <input class="btn btn-info btn-sm" type="submit" name="" value={% trans "Submit" %}>
+          <a type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{% trans "Close" %}</a>
+        </div>
+      </form>
+    </div>
+  </div> 
+</div>
+<!-- ############################ show confirmed order modal ########################### -->
+<div class="modal fade" id="img-modal" tabindex="-1" role="dialog" aria-labelledby="img-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="modal_header">
+	      <button type="button" class="close noprint" data-dismiss="modal" aria-label="Close">   <!--onclick="close_modal()"-->
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="img_div">
+        <!-- h3 class="card-header text-center font-weight-bold text-uppercase">{% trans "Confirmed Order" %}</h3 -->
+        <!-- Put the <img> here -->
+	{% if order.order_state == c %}
+	  <img src="{{ order.order_image.url }}" class="rounded order_img" alt="..." width='100%' >
+	{% endif %}
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-sm btn-primary noprint" id="print_modal" name="" >{% trans "Print" %}</button>
+        <button type="button" class="btn btn-sm btn-secondary noprint" data-dismiss="modal">{% trans "Cancel" %}</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<style></style>
+<script src="{% static 'js/print.js' %}"></script>
+<script src="{% static 'js/remove.js' %}"></script>
+<script src="{% static 'js/upload.js' %}"></script>
+
+  <!-- ##################################################################################################  -->
+  <script>
+//    var deleteFunc = function (element, vend_code) {
+//      $.ajax({
+//        type: "POST",
+//        url: `/delete_order/${element}/`,
+//        data: { csrfmiddlewaretoken: `{{csrf_token}}` },
+//        success: function (response) {
+//          alert(response);
+//          window.location.href = `/list_orders/${vend_code}`;
+//        },
+//      });
+//    };
+  </script>
+  <!-- ######################################################################################### -->
+  <script>
+//    var uploadFunc = function (element) {
+//      $.ajax({
+//        type: 'GET',
+//        url: `/upload_conf_order/`,
+//        data: { 'order_no': element },
+//        success: function (response) {
+//          $("#data_form").html(response);
+//	  $('#exampleModal').modal({ backdrop: 'static', keyboard: false })
+////          $('#exampleModal').modal();
+//        },
+//      });
+//    };
+  </script>
+<!-- ############################# -->
+<script>
+//function submit_form(id) {
+//	id.submit();
+//   }
+</script>
+<!-- ############################# -->
+<script>
+//  function printModal(){
+//    var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+//    mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+//    mywindow.document.write('</head><body >');
+//    mywindow.document.write(document.getElementById("img_div").innerHTML);
+//    mywindow.document.write('</body></html>');
+//    mywindow.print();
+//    mywindow.close();
+//  };
+</script>
+<script>
+//$("#upload_form").on('submit', function(e) {
+//	$ajax({
+//          data:{csrfmiddlewaretoken : `{{csrf_token}}`},
+//	  success : function(response) {
+//                        alert(response);
+//                        location.reload();
+//                },
+//	  error: function (e) {
+//            alert("ERROR : ", e);
+//          }
+//        });
+//});
+  </script>
+  <!-- ######################################################################################### -->
+<script>
+function show_img() {
+	var body = document.body;
+	body.classList.add("modal_print");
+   };
+</script>
+<script>
+  $('#img-modal').on('hidden.bs.modal', function () {
+        var body = document.body;
+        body.classList.remove("modal_print");
+  })
+  function close_modal(){
+        var body = document.body;
+        body.classList.remove("modal_print");
+	
+  };
+
+</script>
+  <script>
+//    var showConfirmed = function () {
+//      var div = document.getElementById('confirmed_order');
+//      if (div.style.display !== 'none') {
+//        div.style.display = 'none';
+//        $("#show_confirmed").text(`{% trans "Show Confirmed Order" %}`);
+//      }
+//      else {
+//        div.style.display = 'block';
+//        $("#show_confirmed").text(`{% trans "Hide Confirmed Order" %}`);
+//      }
+//    };
+  </script>
+  <script>
+//    var showChique = function () {
+//      var div = document.getElementById('chique_image');
+//      if (div.style.display !== 'none') {
+//        div.style.display = 'none';
+//        $("#show_chique").text(`{% trans "Show Chique" %}`);
+//      }
+//      else {
+//        div.style.display = 'block';
+//        $("#show_chique").text(`{% trans "Hide Chique" %}`);
+//      }
+//    };
+  </script>
+
+  <script>
+//    function myFunction() {
+//      window.print();
+//    }
+  </script>
+  
+  <style type="text/css">
+//   @media screen {
+//   }
+//  @media print {
+//    body {
+//      -webkit-print-color-adjust: exact;
+//    }
+
+//    .noprint
+//    {
+//      visibility: hidden;
+//    }
+//  }
+</style>
+{% endblock %}

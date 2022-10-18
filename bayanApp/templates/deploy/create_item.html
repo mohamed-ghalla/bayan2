@@ -1,0 +1,31 @@
+<br>
+<div style="float: left;margin-right:10px">
+<table style="width:80% ">
+<tr>
+	<th>ID</th>
+	<th>ARABIC_NAME</th>
+	<th>VEND_CODE</th>
+	<th>PACK_ID</th>
+	<th>UNIT_DESC</th>
+	<th>NO_OF_ITEMS</th>
+	<th>PURCH_PRICE</th>
+	<th>SALE_PRICE</th>
+	<th>BARCODE</th>
+
+</tr>
+{% for i in items_list %}
+<tr>
+	<td> {{ i.ID }}</td>
+	<td> {{ i.ARABIC_NAME }} </td>
+	<td> {{ i.VEND_CODE }} </td>
+	<td> {{ i.PACK_ID }}</td>
+	<td> {{ i.UNIT_DESC }}</td>
+	<td> {{ i.NO_OF_ITEMS }}</td>
+	<td> {{i.PURCH_PRICE }}</td>
+	<td> {{ i.SALE_PRICE }}</td>
+	<td> {{ i.BARCODE }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+

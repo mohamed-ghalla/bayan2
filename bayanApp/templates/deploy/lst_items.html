@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+  {{items|length}}<br><br>
+<div style="float: left;margin-right:10px">
+  <table style="width:100% ">
+    <tr>
+      <th>item id</th>
+      <th>VEND_CODE</th>
+      <th>ARABIC name</th>
+      <th>pack id</th>
+      <th>no of item</th>
+      <th>unit desc</th>
+      <th>purch price</th>
+      <th>sale price</th>
+      <th>barcode</th>
+    </tr>
+{% for i in items %}
+<tr>
+        <td>{{i.ID}} </td>
+        <td>{{i.VEND_CODE}} </td>
+        <td>{{i.ARABIC_NAME }} </td>
+        <td>{{i.PACK_ID}} </td>
+        <td>{{i.NO_OF_ITEMS }} </td>
+        <td>{{i.UNIT_DESC}}</td>
+        <td>{{i.PURCH_PRICE}}</td>
+        <td>{{i.SALE_PRICE}}</td>
+	<td>{{iBARCODE}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<!--
+  <div class="row row-cols-1 row-cols-md-4 width=20">
+
+<!--{% for item in items %}
+    <div class="col mb-4">
+      <div class="card">
+        <img src="../../statics/baby.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+	  <h6 class="card-title">item name : {{ item.ARABIC_NAME }}</h5>
+	  <h6 class="card-title">vendor id : {{item.VEND_CODE}}</h5>
+	  <h6 class="card-title">item id : {{item.ID}}</h4>
+	  <h6 class="card-title">PACK ID : {{item.PACK_ID}}</h4>
+	  <h6 class="card-title">quantity available : {{ item.NO_OF_ITEMS }}</h5>
+	  <h6 class="card-title">item description : {{item.UNIT_DESC}}</h4>
+	  <h6 class="card-title">Purch price : {{item.PURCH_PRICE}}</h4>
+	  <h6 class="card-title">Sale price : {{item.SALE_PRICE}}</h4>
+	  
+
+          <p class="card-text">This is a longer n to additr.</p>
+	<script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 1;var pfHideImages = 0;var pfImageDisplayStyle = 'none';var pfDisablePDF = 0;var pfDisableEmail = 1;var pfDisablePrint = 0;var pfCustomCSS = 'https://getbootstrap.com/';var pfBtVersion='2';(function(){var js,pf;pf=document.createElement('script');pf.type='text/javascript';pf.src='//cdn.printfriendly.com/printfriendly.js';document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="https://www.printfriendly.com" style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="//cdn.printfriendly.com/buttons/printfriendly-pdf-button-nobg-md.png" alt="Print Friendly and PDF"/></a>
+	</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+    -->
+{% endblock %}
+
+
+

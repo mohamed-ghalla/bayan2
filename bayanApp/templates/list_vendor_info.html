@@ -1,0 +1,233 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+<script type="text/javascript" src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+
+<section id="ibr-vendor-info" class="page-wrapper page-logo-header">
+  <div class="top-sec d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+    <div class="logo-wrapper mb-0 ml-3">
+      <span>
+        {% if vendor.user.profile_pic %}
+          <img class="logo-pic float-right" src="{{ vendor.user.profile_pic.url }}">
+        {% else %}
+          <img class="logo-pic float-right" src="{% static 'img/icon.png' %}">
+        {% endif %}
+      </span>	    
+    </div>
+    <div class="text-center text-md-right">
+      <h2>{{vendor.user.first_name}} {{vendor.user.last_name}}<h2>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <div class="table-responsive " id="table-div">
+      <table class="table table-striped">
+        <tr>
+          <th>{% trans "Full Name" %}</th>
+          <td colspan="3"> {{vendor.user.first_name}} {{vendor.user.last_name}}</td>
+        </tr>
+        <tr>
+          <th>{% trans "Username" %}</th>
+          <td colspan="3"> {{vendor.user.username}}</td>
+        </tr>
+        <tr>
+          <th>{% trans "Email" %}</th>
+          <td colspan="3"> {{vendor.user.email}}</td>
+        </tr>
+        <tr>
+          <th>{% trans "Phone" %}</th>
+          <td colspan="3"> {{vendor.user.phone}}</td>
+        </tr>
+        <tr>
+          <th>{% trans "Person Type" %}</th>
+          <td colspan="3"> {{vendor.user.person_type }}</td>
+        </tr>
+        <tr>
+          <th>{% trans "Type of Supply" %}</th>
+          <td colspan="3"> {{vendor.user.type_of_supply }}</td>
+        </tr>
+        <tr>
+          <th>{% trans "The trade name of the company" %}</th>
+          <td colspan="3"><h5> {{vendor.user.VEND_DESC_ARABIC }}</h5></td>
+        </tr>
+        {% if vendor.user.sign_auth %}
+        <tr>
+          <th>{% trans "Sign Auth" %}</th>
+          <td><img class="files file-pic" src="{{ vendor.user.sign_auth.url }}"></td>
+	  <td>
+	    <a class="btn btn-sm btn-primary" id="show_sign_auth" url="{{ vendor.user.sign_auth.url }}" data-toggle="modal" data-target="#img-modal" >{% trans "show" %}</a>
+          </td>
+          <td><a class="btn btn-sm btn-primary" id="print_sign_auth" url="{{vendor.user.sign_auth.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+        {% if vendor.user.trade_book %}
+        <tr>
+          <th>{% trans "Trade Book" %}</th>
+	  <td><img class="files file-pic" src="{{ vendor.user.trade_book.url }}"></td>
+          <td>
+	    <a class="btn btn-sm btn-primary" id="show_trade_book" url="{{ vendor.user.trade_book.url }}" data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>	  
+	  <td><a class="btn btn-sm btn-primary" id="print_trade_book" url="{{ vendor.user.trade_book.url }}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+        {% if vendor.user.chamber_book %}
+        <tr>
+          <th>{% trans "Chamber Book" %}</th>
+          <td><img class="files file-pic" src="{{ vendor.user.chamber_book.url }}"></td>
+          <td>
+	    <a class="btn btn-sm btn-primary" id="show_chamber_book" url="{{vendor.user.chamber_book.url}}" data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>
+
+	  <td><a class="btn btn-sm btn-primary" id="print_chamber_book" url="{{vendor.user.chamber_book.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+
+
+        {% if vendor.user.trademark %}
+        <tr>
+          <th>{% trans "Trade Mark" %}</th>
+	  <td><img class="files file-pic" src="{{ vendor.user.trademark.url}}"></td>
+	  <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.trademark.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>	  
+	  <td><a class="btn btn-sm btn-primary" id="print_trademark" url="{{vendor.user.trademark.url }}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+
+
+        {% if vendor.user.import_license %}
+        <tr>
+          <th>{% trans "Import License" %}</th>
+	  <td><img class="files file-pic" src="{{vendor.user.import_license.url }}"></td>
+	  <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.import_license.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>
+	  <td><a class="btn btn-sm btn-primary" id="print_import_license" url="{{vendor.user.import_license.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+
+
+        {% if vendor.user.healthy_preview %}
+        <tr>
+          <td>{% trans "Healthy Preview" %}</td>
+	  <td><img class="files file-pic" src="{{vendor.user.healthy_preview.url }}"></td>
+	  <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.healthy_preview.url }}`)'data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>
+          <td><a class="btn btn-sm btn-primary" id="print_healthy_preview" url="{{vendor.user.healthy_preview.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+
+
+        {% if vendor.user.agency_book %}
+        <tr>
+          <td>{% trans "Agency Book" %}</td>
+	  <td><img class="files file-pic" src="{{ vendor.user.agency_book.url }}"></td>
+	  <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.agency_book.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>
+          <td><a class="btn btn-sm btn-primary" id="print_agency_book" url="{{vendor.user.agency_book.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+
+
+        {% if vendor.user.varieties_revealed %}
+        <tr>
+          <td>{% trans "Varieties Revealed" %}</td>
+	  <td><img class="files file-pic" src="{{vendor.user.varieties_revealed.url }}"></td>          
+	  <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.varieties_revealed.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>
+          <td><a class="btn btn-primary" id="print_varieries_reveaked" url="{{vendor.user.varieties_revealed.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+
+
+        {% if vendor.user.federation_of_associations %}
+        <tr>
+          <td>{% trans "Federation of Associations" %}</td>
+          <td><img class="files file-pic"
+		   src="{{vendor.user.federation_of_associations.url}}"></td>
+	  <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.federation_of_associations.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+	  </td>
+          <td><a class="btn btn-primary" id="print_federation_association" url="{{vendor.user.federation_of_associations.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+        {% if vendor.user.healthy_preview %}
+        <tr>
+          <td>{% trans "Customs Declaration" %}</td>
+	  <td><img class="files file-pic" src="{{vendor.user.customs_declaration.url }}"></td>
+          <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.customs_declaration.url }}`)'data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+          </td>
+          <td><a class="btn btn-sm btn-primary" id="print_customs_declaration" url="{{vendor.user.customs_declaration.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+        {% if vendor.user.industrial_facility %}
+        <tr>
+          <td>{% trans "Industrial Facility" %}</td>
+	  <td><img class="files file-pic" src="{{vendor.user.industrial_facility.url }}"></td>
+          <td>
+		  <a class="btn btn-sm btn-primary" onclick='show_img(`{{vendor.user.industrial_facility.url }}`)'data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
+          </td>
+          <td><a class="btn btn-sm btn-primary" id="print_industrial_facility" url="{{vendor.user.industrial_facility.url}}"><i
+                class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
+        </tr>
+        {% endif %}
+	
+      </table>
+    </div>
+  </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="img-modal" tabindex="-1" role="dialog" aria-labelledby="img-modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="img_div">
+        <!-- Put the <img> here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://github.com/pipwerks/PDFObject/blob/master/pdfobject.min.js"></script>
+<script src="print.js"></script>
+<script src="{% static 'js/print.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="print.css">
+<script>
+function show_img(source) {
+  type = source.split('.')[1];
+  if (source.endsWith('.docx') || source.endsWith('.doc')){
+    $("#img_div").html(`<iframe src="https://docs.google.com/gview?url=https://bayancoopq8.com`+source+`&embedded=true" frameborder="0" width="100%" height="600px"></iframe>`);
+  }
+  else if(source.endsWith('.pdf')){
+    $("#img_div").html(`<embed src=https://bayancoopq8.com`+source+` frameborder="0" width="100%" height="600px">`);
+  }
+  else if(source.endsWith('.png') || source.endsWith('.jpg') || source.endsWith('.jfif')){
+    $("#img_div").html("<img class='files file-pic' src="+source+" width='100%' >");
+  }
+  else if(source.endsWith('.xlsx')){
+    $("#img_div").html(`<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://bayancoopq8.com`+source+`' width='100%' height='565px' frameborder='0'> </iframe>`);
+  }
+};
+</script>
+{% endblock %}

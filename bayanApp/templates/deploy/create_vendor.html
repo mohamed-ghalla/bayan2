@@ -1,0 +1,32 @@
+<br>
+<div style="float: left;margin-right:10px">
+<table style="width:80% ">
+<tr>
+	<th>user_id</th>
+	<th>VEND_CODE</th>
+	<th>VEND_DESC_ARABIC</th>
+</tr>
+{% for v in vendors_list %}
+<tr>
+	<td> {{ v.user_id }}</td>
+	<td> {{ v.VEND_CODE }}</td>
+	<td> {{ v.VEND_DESC_ARABIC }} </td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<div style="float: left;margin-right:10px">
+<table style="width:100% ">
+<tr>
+	<th>LOCN_ID</th>
+	<th>LOCN_NAME</th>
+</tr>
+{% for l in loc_list %}
+<tr>
+	<td> {{ l.LOCN_ID }}</td>
+	<td> {{ l.LOCN_NAME }} </td>
+</tr>
+{% endfor %}
+</table>
+</div>

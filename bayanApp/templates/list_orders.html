@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/datatables.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section id="ibr-list-order" class="page-wrapper page-logo-header">
+  
+  <div class="top-sec d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+    <div class="logo-wrapper mb-0 ml-3">
+      <img class="logo-pic float-right" src="{% static 'img/logo.jpg' %}">
+    </div>
+    <div class="text-center text-md-right">
+      <h2 class="text-center">{{ vendor.VEND_DESC_ARABIC }}</h2>
+    </div>
+  </div>
+  {% trans "Vendor" as v %}
+  {% trans "Opened" as opened %}
+  <div class="table-wrapper">
+    <div class="content table-responsive " id="table-div">    
+      <table id="orders_table" class="table table-striped table-bordered table-sm display" style="width:100%">
+        <thead>
+          <tr class="text-center">
+            <th class="">{% trans "Order ID" %}</th>
+            <th class="">{% trans "Order No" %}</th>
+            <th class="">{% trans "Order Date" %}</th>
+            <th class="">{% trans "Order State" %}</th>
+            <th class="">{% trans "Location" %}</th>
+            {% if request.user.person_type == v %}
+              <th class="">{% trans "Delete" %}</th>
+            {% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for o in orders %}
+            <tr class="text-center">
+              <td class=""><a href="{% url 'print_order' order_no=o.order_no %}" class="text-info">{{o.id}}</a></td>
+              <td class=""><a href="{% url 'print_order' order_no=o.order_no %}" class="text-info">{{o.order_no}}</a></td>
+              <td class="">{{o.order_date}}</td>
+              {% if o.order_state == opened %}
+                <td class="text-danger">{% trans o.order_state %}</td>
+              {% else %}
+                <td class="">{% trans o.order_state %}</td>
+              {% endif %}
+              <td class="">{{o.location}}</td>
+              {% if request.user.person_type == v %}
+                <td class="button_remove">
+			{% if o.order_state == opened %}
+			<button type="button" class="button_remove btn btn-danger btn-rounded btn-sm my-0" id="remove_order_{{o.order_no}}_{{csrf_token}}" >
+		      {% trans "Remove" %}
+		    </button>
+                  {% endif %}
+                </td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<div id="print_page">
+  <div id="print_table" >
+    <img src="https://bayancoopq8.com/static/img/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+    <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+    <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+    <div class="d-flex justify-content-center align-items-end">
+      <h4>{% trans "Vendor Orders Report" %}</h4>
+    </div>
+    <hr style="width:80%;margin-center:0">
+    <h4><p class="text-center">{{vendor.VEND_DESC_ARABIC}}</p></h4>`,
+  </div>
+  <div id="title_id"><p class="text-center">{% trans "Bayan Co-operative Society" %}</p></div>
+  <div id="print_columns">{% trans "Print Selected Columns" %}</div>
+  <div id="print_rows">{% trans "Print Selected Rows" %}</div>
+  <div id="select_columns">{% trans "Select Columns" %}</div>
+  <div id="next">{% trans "Next" %}</div>
+  <div id="previous">{% trans "Previous" %}</div>
+  <div id="search">{% trans "Search" %}</div>
+</div>
+
+<script src="{% static 'js/print_orders.js' %}"></script>
+<script src="{% static 'js/remove.js' %}"></script>
+
+{% endblock %}

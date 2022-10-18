@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/css/style-error.css' %}">
+{{image}}
+<section id="error-page">
+  <div class="error-img">
+    <img src="/static/accounts/img/error.png" alt="">
+  </div>
+  {% if page == 'home' %}
+    <p>{% trans "The uploaded file is not supported, please choose photo or excel file" %}</p>
+    <a class="nav-link" href="{% url 'home' %}">{% trans "Home"   %}</a>
+  {% elif page == 'listVendors' %}
+    <p>{% trans "The uploaded file not supported, please select image" %}</p>
+    <a class="nav-link" href="{% url 'list_vendors' %}">{% trans "Vendors"   %}</a>
+  {% elif page == "print_orders" %}
+  <p>{% trans "File type not supported. JPEG, PNG, or pdf recommended" %}</p>
+    <a class="nav-link" href="{% url 'print_order' order_no=parameter%}">{% trans "List Order"   %}</a>
+  {% elif page == "update_products" %}
+  <p>{% trans "File type not supported. xlsx recommended" %}</p>
+    <a class="nav-link" href="{% url 'list_vendors' %}">{% trans "List Vendors"   %}</a>
+
+  {% endif %}
+</section>

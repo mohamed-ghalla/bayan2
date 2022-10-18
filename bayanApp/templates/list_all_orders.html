@@ -1,0 +1,163 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/gijgo.min.css' %}" type="text/css" />
+
+<section id="ibr-list-order" class="page-wrapper page-logo-header">
+  <div class="top-sec d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+    <div class="text-center text-md-right">
+      <h2 class="text-center"></h2>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <div class="table-responsive" id="table-div">
+      <table id="orders_table" class="table table-striped table-bordered table-sm">
+        <thead>
+          <tr class="text-center">
+            <th class="">{% trans "Order ID" %}</th>
+            <th class="">{% trans "Order No" %}</th>
+            <th class="">{% trans "Vendor" %}</th>
+            <th class="">{% trans "Order Date" %}</th>
+            <th class="">{% trans "Order State" %}</th>
+            <th class="">{% trans "Location" %}</th>	    
+          </tr>
+        </thead>
+        <tbody>
+	  {% trans "Opened" as opened %}
+          {% for o in orders %}
+            <tr class="text-center">
+              <td class=""><a href="{% url 'print_order' order_no=o.order_no %}" class="text-success">{{o.id}}</a></td>
+              <td class=""><a href="{% url 'print_order' order_no=o.order_no %}" class="text-success">{{o.order_no}}</a></td>
+              <td class=""><a href="{% url 'list_orders' VEND_CODE=o.VEND_CODE %}" class="text-success">{{o.vendor}}</a></td>
+              <td class="">{{o.order_date}}</td>
+	      {% if o.order_state == opened %}
+                <td class="text-danger">{% trans o.order_state %}</td>
+              {% else %}
+                <td class="">{% trans o.order_state %}</td>
+              {% endif %}
+                <td class="">{{o.location}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row del-orders mt-3 pt-3 border-top">
+    <div class="col-md-6 mb-3 d-flex d-md-block justify-content-center">
+    <input id="datepicker" width="276" value="select date" />
+  </div>
+
+  <div class="col-md-6 mb-3 d-flex align-items-center flex-wrap justify-content-center justify-content-md-end">
+  {% trans "Delete Orders that are older than selected date" %} ?
+    <button type="button" class="button_remove btn btn-danger btn-rounded btn-sm my-0 mr-2"
+			  id="delete_orders_{{csrf_token}}">{% trans "Remove" %}</button>
+    </div>  
+  </div>
+</section>
+<div id="print_page">
+  <div id="print_table" >
+    <img src="https://bayancoopq8.com/static/img/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+    <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+    <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+    <div class="d-flex justify-content-center align-items-end">
+      <h4>{% trans "All Orders List" %}</h4>
+    </div>
+  </div>
+  <div id="title_id"><p class="text-center">{% trans "Bayan Co-operative Society" %}</p></div>
+  <div id="print_columns">{% trans "Print Selected Columns" %}</div>
+  <div id="print_rows">{% trans "Print Selected Rows" %}</div>
+  <div id="select_columns">{% trans "Select Columns" %}</div>
+  <div id="next">{% trans "Next" %}</div>
+  <div id="previous">{% trans "Previous" %}</div>
+  <div id="search">{% trans "Search" %}</div>
+</div>
+
+<script src="{% static 'js/gijgo.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/remove.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/print_orders.js' %}" type="text/javascript"></script>
+<script>
+  $(document).ready(function () {
+    //  $('.dataTables_length').addClass('bs-select');
+    var table = $('#orders_table').DataTable({
+      responsive: true,
+      dom: 'Bfrtip',
+      buttons: [{
+        text: `{% trans 'Print Selected Columns' %}`,
+        extend: 'print',
+        title:`<p class="text-center pl-5">{% trans "Bayan Co-operative Society" %}</p>`,
+        messageTop:`
+	  <img src="https://bayancoopq8.com/static/images/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+          <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+          <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+          <div class="d-flex justify-content-center align-items-end">
+             <h4>{% trans "All Orders List" %}</h4>
+          </div>`,	      
+        exportOptions: {
+          columns: ':visible',
+          modifier: {
+            selected: null
+          }
+        }
+      },
+        'colvis',
+      {
+        text: `{% trans 'Print Selected Rows' %}`,
+        extend: 'print',
+        title:`<p class="text-center ">{% trans "Bayan Co-operative Society" %}</p>`,
+
+        messageTop:`
+  	  <img src="https://bayancoopq8.com/static/images/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+          <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+          <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+          <div class="d-flex justify-content-center align-items-end">
+            <h4>{% trans "All Orders List" %}</h4>
+          </div>`,	      
+        exportOptions: {
+          columns: ':visible',
+          columns: [ 0, 1, 2, 3, 4, 5],
+          modifier: {
+//            selected: null
+          }
+        }	      
+      }],
+      language: {
+        buttons: {
+          colvis: `{% trans 'Select Columns' %}`
+        }
+      },
+      "oLanguage": {
+        "sSearch": `{% trans 'Search' %}`,
+	"sEmptyTable":`{% trans 'No data available in table' %}`,
+        "oPaginate": {
+          "sPrevious": `{% trans 'Previous' %}`, // This is the link to the previous page
+          "sNext": `{% trans 'Next' %}`, // This is the link to the next page
+        }
+      },
+      select: true,
+      columnDefs: [{
+//        targets: -1,
+        visible: false
+      }]
+    }); new $.fn.dataTable.FixedHeader(table);
+  });
+</script>
+<script>
+  var removeFunc = function (element) {
+    var order_date = $('#datepicker').val();
+    $.ajax({
+      type: "POST",
+      url: `/delete_old_orders/${order_date}/`,
+      data: { csrfmiddlewaretoken: `{{csrf_token}}` },
+      success: function (response) {
+        alert(response);
+        location.reload();
+      },
+    });
+  };
+</script>
+{% endblock %}

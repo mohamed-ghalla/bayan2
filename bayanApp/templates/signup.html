@@ -1,0 +1,230 @@
+{% load i18n %}
+{% load static %}
+<html lang="">
+
+<head>
+  <title>Log in | Bayan CO. site</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"> 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="login" data-admin-utc-offset="0">
+  <!-- Container -->
+  <div id="container" class="container">
+    <section id="ibr-signup" class="page-wrapper page-logo-header">
+    <!-- Header -->
+      <div id="header">
+        <div id="branding">
+          <a href="/" class="btn btn-primary mb-3"><i class="fa fa-user ml-3"></i>{% trans "Bayan Co. Signup" %}</a>
+        </div>
+      </div>
+      <!-- END Header -->
+      <!-- Content -->
+      <div id="content" class="colM">
+        <div id="content-main">
+          <form method="POST" action="" class="needs-validation" enctype="multipart/form-data">
+            {% csrf_token %}
+  	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.first_name.label }}
+		{{ form.first_name }}
+		<li class="text-danger">{{form.first_name.errors}}</li>
+	      </div>
+	      <div class="col-sm-6">
+	        {{ form.last_name.label }}
+		{{ form.last_name }}
+		<li class="text-danger">{{form.last_name.errors}}</li>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.username.label }}
+		{{ form.username }}
+		<li class="text-danger">{{ form.username.errors }}</li>
+	      </div>
+	      <div class="col-sm-6">
+		{{ form.email.label }}
+		{{ form.email }}
+		<li class="text-danger">{{ form.email.errors }}</li>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.password1.label }}
+		{{ form.password1 }}
+	         <li class="text-danger">{{form.password1.errors}}</li>
+	      </div>
+	      <div class="col-sm-6">
+	        {{ form.password2.label }}
+	        {{ form.password2 }}
+	        <li class="text-danger">{{form.password2.errors}}</li>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        {{ form.VEND_DESC_ARABIC.label }}
+	        {{ form.VEND_DESC_ARABIC }}
+	        <li class="text-danger">{{form.VEND_DESC_ARABIC.errors}}</li>
+	      </div>
+	      <div class="col-sm-6">
+	        {{ form.phone.label }}
+	        {{ form.phone }}
+		<li class="text-danger">{{ form.phone.errors }}</li>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        {{ form.type_of_supply.label }}
+	        {{ form.type_of_supply }}
+	        <li class="text-danger">{{form.type_of_supply.errors}}</p>
+	      </div>
+	      <div class="col-sm-6">
+	        {{ form.person_type.label }}<br>
+	        {{ form.person_type.as_hidden }}
+	        <p class="mt-2 mr-2 pt-2">{% trans 'Vendor' %}</p>
+	        <li class="text-danger">{{form.person_type.errors}}</p>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-12">
+	        <div class="card-header text-center font-weight-bold text-uppercase py-3 mb-3">
+	          <h5 class="mb-0">{% trans 'Papers Needed to complete Registration' %}</h5>
+                </div>
+              </div>
+            </div>						
+            <div class="row">
+              <div class="col-sm-6">
+                {{ form.sign_auth.label }}
+                {{ form.sign_auth }} 
+                <p class="text-danger">{{form.sign_auth.errors}}</p>
+    	      </div>
+              <div class="col-sm-6">
+      		{{ form.trade_book.label }}
+      		{{ form.trade_book }} 
+ 		<p class="text-danger">{{form.trade_book.errors}}</p>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.chamber_book.label }}
+		{{ form.chamber_book }} 
+		<p class="text-danger">{{form.chamber_book.errors}}</p>
+	      </div>
+	      <div class="col-sm-6">
+		{{ form.trademark.label }}
+		{{ form.trademark }} 
+		<p class="text-danger">{{form.trademark.errors}}</p>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.import_license.label }}
+		{{ form.import_license }} 
+		<p class="text-danger">{{form.import_license.errors}}</p>
+	      </div>
+	      <div class="col-sm-6">
+		{{ form.healthy_preview.label }}
+		{{ form.healthy_preview }} 
+		<p class="text-danger">{{form.healthy_preview.errors}}</p>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.agency_book.label }}
+		{{ form.agency_book }} 
+		<p class="text-danger">{{form.agency_book.errors}}</p>
+	      </div>
+	      <div class="col-sm-6">
+		{{ form.varieties_revealed.label }}
+		{{ form.varieties_revealed }} 
+		<p class="text-danger">{{form.varieties_revealed.errors}}</p>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.federation_of_associations.label }}
+		{{ form.federation_of_associations }} 
+		<p class="text-danger">{{form.federation_of_associations.errors}}</p>
+	      </div>
+	      <div class="col-sm-6">
+		{{ form.customs_declaration.label }}
+		{{ form.customs_declaration }}
+		<p class="text-danger">{{form.customs_declaration.errors}}</p>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+		{{ form.industrial_facility.label }}
+		{{ form.industrial_facility }}
+		<p class="text-danger">{{form.industrial_facility.errors}}</p>
+	      </div>
+	      <div class="col-sm-6">
+ 	      </div>
+	    </div>
+	    <div class="row">							
+	      <div class="col-md-6">
+		{% for message in messages %}
+		  <p id="messages">{{message}}</p>
+		{% endfor %}
+		{% trans "Already have account ?" %} <a href="{% url 'login' %}" class="ml-2 btn btn-sm btn-secondary">{% trans "Login" %}</a>
+		{{form.errors}}
+	      </div>
+	      <div class="col-md-6">
+		<div class="action-btns text-right text-md-left mt-3 mt-md-0">
+		  <input class="btn btn-sm btn-primary m-0" type="submit" value='{% trans "Sign Up" %}'>
+		</div>
+	      </div>
+	    </div>
+	  </form>
+	</div>
+	<br class="clear">
+      </div>
+      <!-- END Content -->
+      <div id="footer"></div>
+    </section>
+  </div>
+  <!-- END Container -->
+</body>
+</html>
+{% block content %}
+{% endblock %}
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+<script type="text/javascript">
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+	    event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>

@@ -1,0 +1,811 @@
+:root {
+  --gray: #6c757d;
+  --orange: #de6b48;
+  --yellow: #ffc857;
+  --blueLight: #98dfea;
+  --blue: #013b83;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 56px;
+  min-height: 100vh;
+  direction: rtl;
+  text-align: right;
+  font-size: 16px;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left center;
+  overflow-x: hidden;
+  font-family: "Markazi Text", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+}
+
+a {
+  word-break: break-all;
+}
+
+table th,
+table td {
+  text-align: center;
+}
+
+th,
+.card-header {
+  color: var(--orange);
+}
+
+input:focus,
+button:focus,
+select:focus,
+a:focus {
+  outline: none;
+}
+
+.modal label {
+  font-family: "Cairo", sans-serif;
+}
+
+nav.navbar {
+  background: #6c757d;
+  color: #fff;
+  padding: 0;
+  font-family: "Cairo", sans-serif;
+}
+
+input[type="file"].form-control {
+  padding: 3px;
+}
+
+nav.navbar .navbar-brand {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  background: var(--blue);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  box-shadow: -1px 0 0px #999;
+}
+
+nav.navbar .navbar-brand::before {
+  content: "";
+  height: 100%;
+  width: 65px;
+  background: url(../img/brand-b4.png) var(--yellow) center center no-repeat;
+  background-size: contain;
+  border-right: 10px solid #ffc857;
+  border-left: 10px solid #ffc857;
+  margin-left: 15px;
+}
+
+nav.navbar .navbar-collapse {
+  padding: 0.5rem 1rem;
+}
+
+nav.navbar .fa-home {
+  color: var(--yellow);
+}
+
+nav.navbar a {
+  color: #fff;
+}
+
+nav.navbar .active a {
+  color: var(--yellow);
+}
+
+nav.navbar .navbar-toggler-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+}
+
+nav.navbar .dropdown-toggle::after {
+  margin-right: 0.255em;
+  margin-left: 0;
+}
+
+nav.navbar .dropdown-menu {
+  right: 0;
+  left: auto;
+  border-radius: 0;
+  top: calc(100% + 2px);
+  border-color: #eee;
+  border-top: none;
+  padding: 0;
+  text-align: right;
+}
+
+nav.navbar .dropdown-menu .dropdown-item {
+  color: #212529;
+  padding-bottom: 0.55rem;
+  padding-top: 0.5rem;
+}
+
+nav.navbar .dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+nav.navbar .dropdown-menu a:hover,
+nav.navbar .dropdown-menu a:focus,
+nav.navbar .dropdown-menu a:active {
+  color: var(--orange);
+  background-color: #fafafa !important;
+}
+
+.navbar-text {
+  font-size: 0.85rem;
+}
+
+.navbar-text .nav-link {
+  padding: 0;
+  margin: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--yellow);
+}
+
+.navbar-text .nav-link i {
+  margin-left: 5px;
+}
+
+.navbar-text .link-logout {
+  color: #ccc;
+  transition: all 0.2s linear;
+}
+
+.navbar-text .link-logout:hover {
+  color: #fff;
+}
+
+nav.navbar + .container {
+  min-height: calc(100% - 56px);
+  padding-top: 45px;
+}
+
+@media screen and (max-width: 991px) {
+  nav.navbar .navbar-collapse {
+    padding-top: 0;
+    padding-bottom: 3px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  nav.navbar .navbar-nav > .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  nav.navbar .navbar-text {
+    justify-content: space-between;
+  }
+  nav.navbar .navbar-text .link-logout {
+    margin-right: auto;
+  }
+}
+
+ul {
+  padding-right: 0px;
+}
+/* ########################### home.html ################### */
+
+.jumbotron {
+}
+.mydiv {
+  height: 450px;
+  background-color: #417699;
+  background-image: url("../img/bayan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* ########################## new order.html #################### */
+
+/*.col_td {
+  width: 50px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.quantity_in {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.order_img {
+  width: 800px;
+}
+.profile-pic {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.logo-pic {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.file-pic {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+}*/
+/* ###################### print order #################### */
+/*.item_td {
+  width: 460px;
+}
+
+#logincontainer {
+  position: relative;
+  width: 35%;
+  min-width: 90px;
+  padding-top: 250;
+  padding-right: 50;
+}
+.mylogin {
+  background: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid red;
+}*/
+/* -------------------------------------------------
+  For all Pages
+------------------------------------------------- */
+
+table.dataTable {
+  width: 100% !important;
+}
+
+.page-wrapper {
+  padding: 30px;
+  margin-bottom: 45px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.page-wrapper .logo-wrapper {
+  display: block;
+  margin-bottom: 1rem;
+  max-width: fit-content;
+}
+
+.page-wrapper table {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.page-wrapper table th,
+.page-wrapper table td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-wrapper table th {
+  font-family: "Cairo", sans-serif;
+}
+
+.page-wrapper table input,
+.page-wrapper table select {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.page-wrapper table select,
+.page-wrapper
+  table
+  input:not([type="file"]):not([type="checkbox"]):not([type="radio"]) {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 30px;
+  min-width: calc(100% - 20px);
+}
+
+.page-wrapper table input.quantity_in {
+  max-width: 80px !important;
+}
+
+.page-wrapper table input[type="file"] {
+  padding: 2px 2px 2px 10px;
+  min-height: 30px;
+  min-width: calc(100% - 20px);
+}
+
+.page-wrapper table .errorlist {
+  list-style: none;
+  color: darkred;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+}
+
+.page-wrapper #my_form label,
+.page-wrapper #my_form .card-header {
+  font-family: "Cairo", sans-serif;
+  border: 0;
+}
+
+.two-elms {
+}
+
+.two-elms .file-pic {
+  max-width: 120px;
+  margin-left: 1rem;
+}
+
+.btn {
+  font-family: "Cairo", sans-serif;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--blue);
+  border-color: transparent;
+}
+
+.action-btns .btn {
+  margin-left: 1rem;
+}
+
+/* -------------------------------------------------
+  Page Header with Logo
+------------------------------------------------- */
+.page-logo-header {
+  font-family: "Cairo", sans-serif;
+}
+
+.page-logo-header .logo-pic {
+  max-height: 79px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ddd;
+  max-width: fit-content;
+  font-family: "Cairo", sans-serif;
+}
+
+.page-logo-header p span {
+  color: var(--orange);
+}
+
+.page-logo-header .top-sec h2 {
+  color: var(--orange);
+}
+
+@media screen and (max-width: 480px) {
+  .page-logo-header .top-sec {
+    flex-direction: column;
+  }
+  .page-logo-header .text-center {
+    margin-top: 1rem;
+  }
+}
+
+/* -------------------------------------------------
+  Page :: Order
+------------------------------------------------- */
+#ibr-order #table table {
+  max-width: 100%;
+}
+
+#ibr-order #table table th:first-child {
+  min-width: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  #ibr-order #my_form .table-editable select.select_item {
+    min-width: 200px;
+  }
+
+  #ibr-order #my_form table td,
+  #ibr-order #my_form table th,
+  #ibr-order #my_form .table-editable.quantity_in {
+    min-width: 60px;
+  }
+}
+
+/* -------------------------------------------------
+  Page :: Print Order
+------------------------------------------------- */
+#ibr-profile .logo-wrapper .profile-pic {
+  max-width: 160px;
+}
+
+/* -------------------------------------------------
+  Page :: Print Order
+------------------------------------------------- */
+#ibr-print-order table {
+  max-width: 100%;
+}
+
+#ibr-print-order .card-header {
+  border: none;
+}
+
+/* -------------------------------------------------
+  Page :: List Products
+------------------------------------------------- */
+
+#dtBasicExample_filter {
+  line-height: 38px;
+}
+
+#dtBasicExample_filter input[type="search"] {
+  height: 38px;
+  margin-right: 0.5rem;
+  font-family: "Markazi Text", sans-serif;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #eee;
+}
+
+@media screen and (max-width: 480px) {
+  .dt-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #dtBasicExample_filter label {
+    display: flex;
+  }
+  #dtBasicExample_filter input[type="search"] {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* -------------------------------------------------
+  Page :: List Orders
+------------------------------------------------- */
+#ibr-list-order #orders_table_wrapper {
+  justify-content: space-between;
+}
+
+#ibr-list-order #orders_table_filter {
+  order: -1;
+}
+
+#ibr-list-order #orders_table_filter input {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+#ibr-list-order #orders_table {
+  border-top: 0;
+}
+
+#ibr-list-order #orders_table_paginate {
+  margin-right: auto;
+}
+
+@media screen and (max-width: 480px) {
+  #ibr-list-order #orders_table_filter {
+    width: 100%;
+  }
+  #ibr-list-order #orders_table_filter label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #ibr-list-order #orders_table_filter label input {
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------------
+  Page :: List Vendors
+------------------------------------------------- */
+
+#ibr-list-vendors a[data-target="#AllProductModal"] {
+  margin-bottom: 1rem;
+}
+
+#dtBasicExample_wrapper {
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+#dtBasicExample_filter {
+  order: -1;
+  margin-bottom: 0.333em;
+}
+
+#dtBasicExample_filter input {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+#dtBasicExample {
+  border-top: 0;
+}
+
+#dtBasicExample_paginate {
+  margin-right: auto;
+}
+
+@media screen and (max-width: 480px) {
+  #dtBasicExample_filter {
+    width: 100%;
+  }
+  #dtBasicExample_filter label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #dtBasicExample_filter label input {
+    width: 100%;
+  }
+}
+
+.modal .modal-header .close {
+  margin-right: auto;
+  margin-left: -1rem;
+}
+
+.modal .modal-header .modal-title {
+  color: var(--orange);
+}
+
+#data_form input {
+  width: 100%;
+  margin-top: 10px;
+  height: 36px;
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+  transition: all 0.2s linear;
+}
+
+#data_form input:focus {
+  border-color: #ccc;
+}
+
+#data_form input[type="file"] {
+  padding: 2px;
+}
+
+#data_form input:not([type="file"]) {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* -------------------------------------------------
+  Page :: Vendor Info
+------------------------------------------------- */
+#ibr-vendor-info .file-pic {
+  max-width: 160px;
+  border-radius: 0.25rem;
+}
+
+#ibr-vendor-info th {
+  white-space: nowrap;
+}
+
+#ibr-vendor-info a:not(.btn) {
+  min-width: 150px;
+}
+
+#chique_form input:not(#chique_submit_btn) {
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  height: 36px;
+  padding: 0 10px;
+}
+
+#chique_form input[type="file"] {
+  padding: 2px 2px 2px 10px;
+}
+
+/* -------------------------------------------------
+  Page :: List All Orders
+------------------------------------------------- */
+.del-orders .gj-datepicker #datepicker {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.del-orders .gj-datepicker .btn {
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-left: 1px solid #ced4da !important;
+  border-right: 0 !important;
+  background-color: #fff;
+}
+
+/* -------------------------------------------------
+  Page :: Change Password
+------------------------------------------------- */
+.loginbox {
+  max-width: 100%;
+  height: auto !important;
+  margin-top: 45px !important;
+  margin-bottom: 45px !important;
+}
+
+.change-password-notes {
+  padding: 0;
+  margin: 0;
+  list-style: inside;
+}
+
+#ibr-change-pass h4:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin: 13px auto 0;
+  background: #ccc;
+}
+
+#ibr-change-pass input:not(.btn) {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#ibr-change-pass .change-password-notes {
+  border: 1px solid #ddd;
+  padding: 10px 10px;
+  background: #fff;
+}
+
+#ibr-change-pass li {
+  list-style: none;
+}
+
+#ibr-change-pass li:not(:last-child) {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* -------------------------------------------------
+  Page :: Signup
+------------------------------------------------- */
+#ibr-signup form {
+  border: 1px dashed #ccc;
+  padding: 15px;
+}
+
+#ibr-signup form .col-sm-6 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#ibr-signup form label {
+  color: var(--orange);
+}
+
+#ibr-signup form input:not(.btn),
+#ibr-signup form select {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  height: 36px;
+}
+
+#ibr-signup form input[type="file"] {
+  padding: 2px 2px 2px 10px;
+}
+
+#products_data_form input[type="file"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 2px;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+ul.pagination {
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  ul.pagination {
+    justify-content: center;
+  }
+}
+
+ul.pagination .paginate_button {
+  padding: 0.5rem;
+}
+
+@media print {
+  @page {      
+      margin: -20px 0 0 0;
+  }
+  html {
+    background-image: url("../img/print-top.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
+    page-break-after: always;
+    /* background-color: #f8f8f8; */    
+    /* background: none !important; */
+  }
+  body {
+    /* background: none !important; */
+    background-image: url("../img/print-top.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;    
+    page-break-after: always;
+  }
+  .modal_print,
+  .modal_print .modal {
+    background: none !important
+  }
+
+  .modal_print .container,
+  .modal_print .modal .modal-header ,
+  .modal_print .modal .modal-footer {
+    display: none;
+  }
+  .noprint{
+	  visibility: hidden;
+	  display: none;
+  }
+}
+
+.select2-hidden-accessible {display: none}
+
+#chique_spinner { 
+	display:none;
+}
+#products_spinner {
+  display:none;
+}
+#allProducts_spinner {
+  display:none;
+}
+#print_page {
+	display:none;
+}
+#template_row {
+  display:none;
+}
+.text-center {
+  text-align: center;
+}
+#sales_order_spinner {
+	display:none;
+}

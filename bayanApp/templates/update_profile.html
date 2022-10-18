@@ -1,0 +1,133 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <section id="ibr-profile" class="page-wrapper">
+    <span class="logo-wrapper">
+      {% if request.user.profile_pic %}
+	<img class="profile-pic" src="{{ request.user.profile_pic.url }}">
+      {% else %}
+        <img class="profile-pic" src="{% static 'img/icon.png' %}">
+      {% endif %}	    
+    </span>
+
+{% trans "Vendor" as v %}
+<form method="POST" action="" enctype="multipart/form-data" class="needs-validation" >
+  {% csrf_token %}
+  <div class="table-wrapper table-responsive">
+    <table class="table table-striped">      
+      <tbody>
+        <tr>
+	  <th>{{form.first_name.label}}</th>
+          <td>{{form.first_name}}</td>
+          <td>{{form.first_name.errors}}</td>
+        </tr>
+        <tr>
+          <th>{{form.last_name.label}}</th>
+          <td>{{form.last_name}}</td>
+          <td>{{form.last_name.errors}}</td>
+        </tr>
+        <tr>
+          <th>{{form.username.label}}</th>
+          <td>{{form.username}}</td>
+          <td>{{form.username.errors}}</td>
+        </tr>
+        <tr>
+          <th>{{form.phone.label}}</th>
+          <td>{{form.phone}}</td>
+          <td>{{form.phone.errors}}</td>
+        </tr>
+        <tr>
+          <th>{{form.email.label}}</th>
+          <td>{{form.email}}</td>
+          <td>{{form.email.errors}}</td>
+        </tr>
+        <tr>
+	  <th>{{form.profile_pic.label}}</th>
+          <td>{{form.profile_pic}}</td>
+          <td>{{form.profile_pic.errors}}</td>
+        </tr>
+	{% if request.user.person_type == v %}
+        <tr class="noprint">
+          <th>{{form.type_of_supply.label}}</th>
+          <td>{{form.type_of_supply }}</td>
+          <td>{{form.type_of_supply.errors}}</td>
+        </tr>
+	
+        <tr class="noprint">
+	  <th>{{form.VEND_DESC_ARABIC.label}}</th>
+          <td>{{form.VEND_DESC_ARABIC}}</td>
+          <td>{{form.VEND_DESC_ARABIC.errors}}</td>
+        </tr>
+	  <tr>
+	    <td  colspan="3"><h3 class="card-header text-center text-uppercase py-2">{% trans "Required Papers" %}</h3></td>
+	  </tr>
+          <tr class="">
+            <th>{{ form.sign_auth.label }}</th>
+	    <td>{{ form.sign_auth }}</td>
+	    <td> {{form.sign_auth.errors}}</td>
+	  </tr>
+	  <tr>
+            <th>{{ form.trade_book.label }}</th>
+            <td>{{ form.trade_book }}</td>
+            <td> {{form.trade_book.errors}}</td>
+          </tr>
+          <tr class="">
+            <th>{{ form.chamber_book.label }}</th>
+            <td>{{ form.chamber_book }}</td>
+            <td> {{form.chamber_book.errors}}</td>
+	  </tr>
+          <tr>
+            <th>{{ form.trademark.label }}</th>
+            <td>{{ form.trademark }}</td>
+            <td> {{form.trademark.errors}}</td>
+          </tr>
+          <tr class="">
+            <th>{{ form.import_license.label }}</th>
+            <td>{{ form.import_license }}</td>
+            <td> {{form.import_license.errors}}</td>
+	  </tr>
+          <tr>
+            <th>{{ form.healthy_preview.label }}</th>
+            <td>{{ form.healthy_preview }}</td>
+            <td> {{form.healthy_preview.errors}}</td>
+          </tr>
+          <tr class="">
+            <th>{{ form.agency_book.label }}</th>
+            <td>{{ form.agency_book }}</td>
+            <td> {{form.agency_book.errors}}</td>
+	  </tr>
+          <tr>
+            <th>{{ form.varieties_revealed.label }}</th>
+            <td>{{ form.varieties_revealed }}</td>
+            <td> {{form.varieties_revealed.errors}}</td>
+          </tr>
+          <tr class="">
+            <th>{{ form.federation_of_associations.label }}</th>
+            <td>{{ form.federation_of_associations }}</td>
+            <td> {{form.federation_of_associations.errors}}</td>
+          </tr>	
+          <tr class="">
+            <th>{{ form.customs_declaration.label }}</th>
+            <td>{{ form.customs_declaration }}</td>
+            <td> {{form.customs_declaration.errors}}</td>
+          </tr>
+          <tr class="">
+            <th>{{ form.industrial_facility.label }}</th>
+            <td>{{ form.industrial_facility }}</td>
+            <td> {{form.industrial_facility.errors}}</td>
+          </tr>
+	{% endif %}
+      </tbody>
+    </table>
+  </div>
+  <div class="action-btns d-flex align-items-center flex-wrap">
+	  <input class="btn btn-primary" type="Submit" name="update information" value="{% trans 'Submit' %}">
+    <a class="btn btn-primary btn-md " href="{% url 'profile' %}" role="button">{% trans "Cancel" %}</a>
+  </div>
+</form>
+</section>
+{% endblock %}

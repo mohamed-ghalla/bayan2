@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap");
+
+#error-page {
+    display: flex;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 20px);
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+    text-align: right;
+    align-items: center;
+    font-family: "Cairo", sans-serif;
+}
+
+#error-page * {
+    box-sizing: border-box;
+}
+
+#error-page .error-img {
+    margin-bottom: 15px;
+}
+
+#error-page .error-img img {
+    max-width: 100%;    
+}
+
+#error-page p {
+    color: #3eb8ea;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#error-page a {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    color: #38abd9;
+    border: 1px solid #38abd9;
+    border-radius: 50px;
+    max-width: fit-content;
+    text-decoration: none;
+
+}

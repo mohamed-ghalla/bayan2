@@ -1,0 +1,62 @@
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
+from django.forms import ModelForm, TextInput
+from django import forms
+from .models import * #User, Order_MS_VCHR_XO, ConfirmedOrders, Product, Vendor, ChiqueImage, Location
+from datetime import datetime
+from phone_field import PhoneField
+from django.utils.translation import gettext_lazy as _
+from .validators import validate_billFile_type, validate_image_type, validate_file_type, validate_products_file_type
+class PasswordChangeForm(PasswordChangeForm):
+    class Meta:
+        model = User
+        field = ['username', 'password']
+
+    old_password    = forms.CharField   (required=True, max_length=32, widget=forms.PasswordInput, label =_('old_password'))
+    new_password1   = forms.CharField   (required=True, max_length=32, widget=forms.PasswordInput, label =_('new_password1'))
+    new_password2   = forms.CharField   (required=True, max_length=32, widget=forms.PasswordInput, label =_('new_password2'))
+
+class SignUpForm(UserCreationForm):
+
+    class Meta:
+        model = User
+#        widgets = {
+#                'password': forms.PasswordInput,
+#                }
+        fields = ['first_name', 'last_name', 'username', 'email', 'password1', 'password2', 'phone', 'VEND_DESC_ARABIC', 'person_type', 'type_of_supply', 
+                'sign_auth', 'trade_book', 'chamber_book', 'trademark', 'import_license', 'healthy_preview', 
+                'agency_book', 'varieties_revealed', 'customs_declaration', 'industrial_facility', 'federation_of_associations']
+
+    person_choices = ( (_('Admin'),_('Admin')), (_('Vendor'),_('Vendor')) , (_('Sales'),_('Sales')), (_('Accounts'), _('Accounts' )))
+    supply_choices = ((_('not vendor'),_('not vendor')), (_('vegetables'),_('vegetables')), (_('beautify'),_('beautify')), (_('Families supplies'),_('Families supplies')),
+        (_('Markets and branches'),_('Markets and branches')))
+#    supply_choices = (('خضار', 'خضار'), ('تجميل ', 'تجميل'), ('لوازم عائلات', 'لوازم عائلات'), ('اسواق وفروع', 'اسواق وفروع'))
+
+    first_name       = forms.CharField   (required=True, max_length=20, label=_("First Name"))
+    last_name        = forms.CharField   (required=True, max_length=20, label=_("Last Name"))
+    username         = forms.CharField   (required=True, max_length=20, label=_("Username"))
+    email            = forms.EmailField  (required=True, label=_("Email"))
+    password1 = forms.CharField(required=False, widget=forms.PasswordInput())
+    password2 = forms.CharField(required=False, widget=forms.PasswordInput())
+#    phone            = forms.CharField   (required=True, label=_("Phone")) 
+    phone     = forms.CharField   (required=True, label=_("Phone"))
+    VEND_DESC_ARABIC = forms.CharField   (required=True, label=_("The trade name of the company"))
+    type_of_supply   = forms.ChoiceField (required=True, widget=forms.Select, choices = supply_choices, label=_("Type of Supply"))
+    person_type      = forms.ChoiceField (required=True, initial=_('Vendor'), widget=forms.Select, choices = person_choices, label=_("Person Type")) 
+#    person_type      = forms.ChoiceField (required=True, widget=forms.Select, choices = person_choices, label=_("Person Type"), initial=_('Vendor'))
+    password1        = forms.CharField   (required=True, max_length=32, widget=forms.PasswordInput, label=_('password1'))
+    password2        = forms.CharField   (required=True, max_length=32, widget=forms.PasswordInput, label=_('passowrd2'))
+
+    sign_auth        = forms.FileField   (required=False, validators=[validate_file_type], label=_('Sign Auth'))
+    trade_book       = forms.FileField   (required=False, validators=[validate_file_type], label=_('Trade Book'))
+    chamber_book     = forms.FileField   (required=False, validators=[validate_file_type], label=_('Chamber Book'))
+    trademark        = forms.FileField   (required=False, validators=[validate_file_type], label=_('Trade Mark'))
+    import_license   = forms.FileField   (required=False, validators=[validate_file_type], label=_('Import License'))
+    healthy_preview  = forms.FileField   (required=False, validators=[validate_file_type], label=_('Healthy Preview'))
+    agency_book      = forms.FileField   (required=False, validators=[validate_file_type], label=_('Agency Book'))
+    varieties_revealed= forms.FileField  (required=False, validators=[validate_file_type], label=_('Varieties Revealed'))
+    customs_declaration = forms.FileField (required=False, validators=[validate_file_type], label=_('Customs Declaration'))
+    industrial_facility = forms.FileField (required=False, validators=[validate_file_type], label=_('Industrial Facility'))    
+    federation_of_associations= forms.FileField(required=False, validators=[validate_file_type], label=_('Federation Of Associations'))
+
+    person_type.widget.attrs['readonly'] = True
+

@@ -1,0 +1,1254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-01 22:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: bayanApp/admin.py:15
+msgid "Bayan Co. Administration"
+msgstr "إدارة موقع جمعية بيان التعاونية"
+
+#: bayanApp/admin.py:39 bayanApp/forms.py:29 bayanApp/forms.py:44
+#: bayanApp/forms.py:71 bayanApp/forms.py:84 bayanApp/models.py:27
+#: bayanApp/models.py:63 bayanApp/templates/home.html:7
+#: bayanApp/templates/layout.html:69 bayanApp/templates/list_all_orders.html:24
+#: bayanApp/templates/list_orders.html:18 bayanApp/templates/order_xo.html:43
+#: bayanApp/templates/print_order.html:104 bayanApp/templates/profile.html:15
+#: bayanApp/templates/sales_order.html:44 bayanApp/templates/signup.html:94
+#: bayanApp/templates/update_profile.html:17 bayanApp/views.py:80
+#: bayanApp/views.py:203 bayanApp/views.py:360
+msgid "Vendor"
+msgstr "المورد"
+
+#: bayanApp/forms.py:14
+msgid "old_password"
+msgstr "كلمة المرور الحالية"
+
+#: bayanApp/forms.py:15
+msgid "new_password1"
+msgstr "كلمة المرور الجديدة"
+
+#: bayanApp/forms.py:16
+msgid "new_password2"
+msgstr "تأكيد كلمة المرور الجديدة"
+
+#: bayanApp/forms.py:29 bayanApp/forms.py:71 bayanApp/models.py:27
+#: bayanApp/views_deploy.py:43
+msgid "Admin"
+msgstr "مدير"
+
+#: bayanApp/forms.py:29 bayanApp/forms.py:71 bayanApp/models.py:27
+#: bayanApp/models.py:79 bayanApp/templates/layout.html:70
+#: bayanApp/templates/list_vendors.html:12
+#: bayanApp/templates/print_order.html:103 bayanApp/views.py:196
+msgid "Sales"
+msgstr "المشتريات"
+
+#: bayanApp/forms.py:29 bayanApp/forms.py:71 bayanApp/models.py:27
+#: bayanApp/models.py:90
+msgid "Accounts"
+msgstr "الحسابات"
+
+#: bayanApp/forms.py:30 bayanApp/models.py:28
+msgid "not vendor"
+msgstr "-----"
+
+#: bayanApp/forms.py:30 bayanApp/forms.py:72 bayanApp/models.py:28
+msgid "vegetables"
+msgstr "خضار"
+
+#: bayanApp/forms.py:30 bayanApp/forms.py:72 bayanApp/models.py:28
+msgid "beautify"
+msgstr "تجميل"
+
+#: bayanApp/forms.py:30 bayanApp/forms.py:72 bayanApp/models.py:28
+#: bayanApp/models.py:29
+msgid "Families supplies"
+msgstr "لوازم عائلات"
+
+#: bayanApp/forms.py:31 bayanApp/forms.py:73 bayanApp/models.py:29
+msgid "Markets and branches"
+msgstr "أسواق وفروع"
+
+#: bayanApp/forms.py:34 bayanApp/forms.py:75
+msgid "First Name"
+msgstr "الإسم لأول"
+
+#: bayanApp/forms.py:35 bayanApp/forms.py:76
+msgid "Last Name"
+msgstr "الإسم الأخير"
+
+#: bayanApp/forms.py:36 bayanApp/forms.py:77
+#: bayanApp/templates/list_newUser_info.html:31
+#: bayanApp/templates/list_vendor_info.html:33 bayanApp/templates/login.html:29
+#: bayanApp/templates/login.html:30 bayanApp/templates/profile.html:24
+msgid "Username"
+msgstr "إسم المستخدم"
+
+#: bayanApp/forms.py:37 bayanApp/forms.py:78
+#: bayanApp/templates/list_newUser_info.html:35
+#: bayanApp/templates/list_vendor_info.html:37
+#: bayanApp/templates/profile.html:28
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: bayanApp/forms.py:41 bayanApp/forms.py:79 bayanApp/models.py:32
+#: bayanApp/templates/list_newUser_info.html:43
+#: bayanApp/templates/list_vendor_info.html:41
+#: bayanApp/templates/profile.html:32
+msgid "Phone"
+msgstr "الهاتف"
+
+#: bayanApp/forms.py:42 bayanApp/forms.py:82
+#: bayanApp/templates/list_newUser_info.html:39
+#: bayanApp/templates/list_newUsers.html:18
+#: bayanApp/templates/list_vendor_info.html:53
+#: bayanApp/templates/profile.html:45
+msgid "The trade name of the company"
+msgstr "الإسم التجاري للشركة"
+
+#: bayanApp/forms.py:43 bayanApp/forms.py:83 bayanApp/models.py:49
+#: bayanApp/templates/list_newUser_info.html:50
+#: bayanApp/templates/list_vendor_info.html:49
+#: bayanApp/templates/profile.html:41
+msgid "Type of Supply"
+msgstr "نوع التوريد"
+
+#: bayanApp/forms.py:44 bayanApp/forms.py:84 bayanApp/models.py:48
+#: bayanApp/templates/list_newUser_info.html:46
+#: bayanApp/templates/list_vendor_info.html:45
+#: bayanApp/templates/profile.html:36
+msgid "Person Type"
+msgstr "تصنيف المستخدم"
+
+#: bayanApp/forms.py:46
+msgid "password1"
+msgstr "كلمة السر"
+
+#: bayanApp/forms.py:47
+msgid "passowrd2"
+msgstr "تأكيد كلمة السر"
+
+#: bayanApp/forms.py:49 bayanApp/forms.py:86 bayanApp/models.py:36
+#: bayanApp/templates/list_newUser_info.html:56
+#: bayanApp/templates/list_vendor_info.html:58
+#: bayanApp/templates/profile.html:56
+msgid "Sign Auth"
+msgstr "إعتماد توقيع"
+
+#: bayanApp/forms.py:50 bayanApp/forms.py:87 bayanApp/models.py:37
+#: bayanApp/templates/list_newUser_info.html:68
+#: bayanApp/templates/list_vendor_info.html:69
+#: bayanApp/templates/profile.html:68
+msgid "Trade Book"
+msgstr "كتاب التجارة"
+
+#: bayanApp/forms.py:51 bayanApp/forms.py:88 bayanApp/models.py:38
+#: bayanApp/templates/list_newUser_info.html:79
+#: bayanApp/templates/list_vendor_info.html:80
+#: bayanApp/templates/profile.html:80
+msgid "Chamber Book"
+msgstr "كتاب غرفة التجارة والصناعة"
+
+#: bayanApp/forms.py:52 bayanApp/forms.py:89 bayanApp/models.py:39
+#: bayanApp/templates/list_newUser_info.html:93
+#: bayanApp/templates/list_vendor_info.html:94
+#: bayanApp/templates/profile.html:91
+msgid "Trade Mark"
+msgstr "علامة تجارية"
+
+#: bayanApp/forms.py:53 bayanApp/forms.py:90 bayanApp/models.py:40
+#: bayanApp/templates/list_newUser_info.html:106
+#: bayanApp/templates/list_vendor_info.html:107
+#: bayanApp/templates/profile.html:102
+msgid "Import License"
+msgstr "ترخيص الإستيراد"
+
+#: bayanApp/forms.py:54 bayanApp/forms.py:91 bayanApp/models.py:41
+#: bayanApp/templates/list_newUser_info.html:119
+#: bayanApp/templates/list_vendor_info.html:120
+#: bayanApp/templates/profile.html:113
+msgid "Healthy Preview"
+msgstr "معاينة صحي"
+
+#: bayanApp/forms.py:55 bayanApp/forms.py:92 bayanApp/models.py:42
+#: bayanApp/templates/list_newUser_info.html:132
+#: bayanApp/templates/list_vendor_info.html:133
+#: bayanApp/templates/profile.html:124
+msgid "Agency Book"
+msgstr "كتاب وكالة"
+
+#: bayanApp/forms.py:56 bayanApp/forms.py:93 bayanApp/models.py:43
+#: bayanApp/templates/list_newUser_info.html:145
+#: bayanApp/templates/list_vendor_info.html:146
+#: bayanApp/templates/profile.html:133
+msgid "Varieties Revealed"
+msgstr "كتاب أصناف"
+
+#: bayanApp/forms.py:57 bayanApp/forms.py:94 bayanApp/models.py:44
+#: bayanApp/templates/list_newUser_info.html:168
+#: bayanApp/templates/list_vendor_info.html:171
+#: bayanApp/templates/profile.html:152
+msgid "Customs Declaration"
+msgstr "البيان الجمركي"
+
+#: bayanApp/forms.py:58 bayanApp/forms.py:95 bayanApp/models.py:45
+#: bayanApp/templates/list_newUser_info.html:180
+#: bayanApp/templates/list_vendor_info.html:182
+#: bayanApp/templates/profile.html:161
+msgid "Industrial Facility"
+msgstr "منشأة صناعية"
+
+#: bayanApp/forms.py:59 bayanApp/forms.py:96 bayanApp/models.py:46
+msgid "Federation Of Associations"
+msgstr "تعميم إتحاد جمعيات"
+
+#: bayanApp/forms.py:80 bayanApp/models.py:34
+msgid "Profile Picture"
+msgstr "صورتي الشخصية"
+
+#: bayanApp/forms.py:111
+msgid "Please select location"
+msgstr "من فضلك اختر موقع صحيح"
+
+#: bayanApp/forms.py:113 bayanApp/forms.py:146 bayanApp/models.py:128
+#: bayanApp/templates/list_all_orders.html:31
+#: bayanApp/templates/list_orders.html:19 bayanApp/templates/order_xo.html:32
+#: bayanApp/templates/print_order.html:102 bayanApp/views.py:267
+msgid "Opened"
+msgstr "مفتوح"
+
+#: bayanApp/forms.py:113 bayanApp/forms.py:146 bayanApp/forms.py:148
+#: bayanApp/models.py:128 bayanApp/templates/print_order.html:105
+#: bayanApp/templates/sales_order.html:33 bayanApp/views.py:239
+msgid "Closed"
+msgstr "مغلق"
+
+#: bayanApp/forms.py:150
+msgid "Order Data"
+msgstr "بيانات  الطلب"
+
+#: bayanApp/forms.py:150
+msgid "Please upload data File"
+msgstr "من فضلك اختر ملف بيانات الطلب"
+
+#: bayanApp/forms.py:152
+msgid "Please select location from the list."
+msgstr "من فضلك اختر موقع صحيح"
+
+#: bayanApp/forms.py:153
+msgid "Please select vendor from the list."
+msgstr "من فضلك اختر موقع صحيح"
+
+#: bayanApp/models.py:24 bayanApp/models.py:56 bayanApp/models.py:75
+#: bayanApp/models.py:85 bayanApp/templates/list_all_orders.html:81
+#: bayanApp/templates/list_all_orders.html:101
+#: bayanApp/templates/list_bills.html:91 bayanApp/templates/list_bills.html:113
+#: bayanApp/templates/list_newUsers.html:82
+#: bayanApp/templates/list_newUsers.html:107
+#: bayanApp/templates/list_orders.html:76
+#: bayanApp/templates/list_orders.html:107
+#: bayanApp/templates/list_products.html:62
+#: bayanApp/templates/list_products.html:90
+#: bayanApp/templates/list_transactions.html:73
+#: bayanApp/templates/list_transactions.html:105
+#: bayanApp/templates/list_vendors.html:293
+#: bayanApp/templates/list_vendors.html:317
+#: bayanApp/templates/print_order.html:24
+msgid "User"
+msgstr "إسم المستخدم"
+
+#: bayanApp/models.py:25
+msgid "Users"
+msgstr "المستخدمين"
+
+#: bayanApp/models.py:33 bayanApp/models.py:58 bayanApp/models.py:135
+msgid "VEND_DESC_ARABIC"
+msgstr "الإسم التجاري للشركة"
+
+#: bayanApp/models.py:57 bayanApp/models.py:98 bayanApp/models.py:134
+#: bayanApp/models.py:181 bayanApp/models.py:194 bayanApp/models.py:209
+#: bayanApp/templates/list_vendors.html:21
+#: bayanApp/templates/list_vendors.html:138
+msgid "VEND_CODE"
+msgstr "رمز المورد"
+
+#: bayanApp/models.py:59 bayanApp/models.py:207
+msgid "Chique_Image"
+msgstr " صورة الطلب"
+
+#: bayanApp/models.py:64 bayanApp/templates/error_filetype.html:14
+#: bayanApp/templates/layout.html:105 bayanApp/templates/layout.html:120
+#: bayanApp/templates/list_vendors.html:22
+msgid "Vendors"
+msgstr "الموردين"
+
+#: bayanApp/models.py:76
+msgid "sales_code"
+msgstr "رقم المستخدم"
+
+#: bayanApp/models.py:78
+msgid "Sale"
+msgstr "المشتريات"
+
+#: bayanApp/models.py:87
+msgid "accounts_code"
+msgstr "رقم المستخدم"
+
+#: bayanApp/models.py:89
+msgid "Account"
+msgstr "الحسابات"
+
+#: bayanApp/models.py:99
+msgid "PACK_ID"
+msgstr "رمز الشد"
+
+#: bayanApp/models.py:100
+msgid "NO_OF_ITEMS"
+msgstr "عدد المنتجات"
+
+#: bayanApp/models.py:101
+msgid "ARABIC_NAME"
+msgstr "إسم المنتج"
+
+#: bayanApp/models.py:102
+msgid "UNIT_DESC"
+msgstr "الوحدة"
+
+#: bayanApp/models.py:103
+msgid "PURCH_PRICE"
+msgstr "سعر الشراء"
+
+#: bayanApp/models.py:104
+msgid "SALE_PRICE"
+msgstr "سعر الخصم"
+
+#: bayanApp/models.py:105
+msgid "BARCODE"
+msgstr "الرمز الشريطي"
+
+#: bayanApp/models.py:107
+msgid "Product"
+msgstr "المنتج"
+
+#: bayanApp/models.py:108 bayanApp/templates/layout.html:97
+#: bayanApp/templates/list_vendors.html:25
+msgid "Products"
+msgstr "المنتجات"
+
+#: bayanApp/models.py:116 bayanApp/models.py:137
+#: bayanApp/templates/list_all_orders.html:27
+#: bayanApp/templates/list_orders.html:29 bayanApp/templates/order_xo.html:39
+#: bayanApp/templates/print_order.html:54
+#: bayanApp/templates/sales_order.html:40
+msgid "Location"
+msgstr "الموقع"
+
+#: bayanApp/models.py:117
+msgid "Locations"
+msgstr "المواقع"
+
+#: bayanApp/models.py:119
+msgid "LOCN_ID"
+msgstr "رقم الموقع"
+
+#: bayanApp/models.py:120
+msgid "LOCN_NAME"
+msgstr "إسم الموقع"
+
+#: bayanApp/models.py:126
+msgid "Order"
+msgstr "الطلب"
+
+#: bayanApp/models.py:127 bayanApp/templates/layout.html:90
+#: bayanApp/templates/layout.html:112 bayanApp/templates/layout.html:115
+#: bayanApp/templates/list_vendors.html:24
+msgid "Orders"
+msgstr "الطلبات"
+
+#: bayanApp/models.py:130
+msgid "Order_No"
+msgstr "رقم الطلب"
+
+#: bayanApp/models.py:131
+msgid "Order_Date"
+msgstr "تاريخ الطلب"
+
+#: bayanApp/models.py:132
+msgid "Order_State"
+msgstr "حالة الطلب"
+
+#: bayanApp/models.py:133
+msgid "Order_Image"
+msgstr " صورة الطلب"
+
+#: bayanApp/models.py:138 bayanApp/templates/order_xo.html:51
+#: bayanApp/templates/print_order.html:55
+#: bayanApp/templates/sales_order.html:51
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: bayanApp/models.py:139
+msgid "table_data"
+msgstr "بيانات الطلب"
+
+#: bayanApp/models.py:140
+msgid "Order_data_Image"
+msgstr " صورة الطلب"
+
+#: bayanApp/models.py:150
+msgid "Image"
+msgstr " صورة الطلب"
+
+#: bayanApp/models.py:155
+#, python-format
+msgid "Quantity %(value)s is not allowed"
+msgstr ""
+
+#: bayanApp/models.py:158
+msgid "quantity"
+msgstr "الكمية"
+
+#: bayanApp/models.py:170
+msgid "Transaction"
+msgstr "رقم المعاملة"
+
+#: bayanApp/models.py:171
+msgid "Transactions"
+msgstr "رقم المعاملة"
+
+#: bayanApp/models.py:173
+msgid "read"
+msgstr "تمت قرائته"
+
+#: bayanApp/models.py:173
+msgid "unread"
+msgstr "غير مقروئه"
+
+#: bayanApp/models.py:174
+msgid "new order"
+msgstr "طلب جديد"
+
+#: bayanApp/models.py:174
+msgid "confirm order"
+msgstr "الطلبات المؤكدة"
+
+#: bayanApp/models.py:174 bayanApp/templates/list_vendors.html:26
+msgid "update products"
+msgstr "تعديل قائمة المنتجات"
+
+#: bayanApp/models.py:174
+msgid "upload chique"
+msgstr "رفع الشيك"
+
+#: bayanApp/models.py:176
+msgid "T_No"
+msgstr "رقم المعاملة"
+
+#: bayanApp/models.py:177
+msgid "T_Date"
+msgstr "تاريخ الطلب"
+
+#: bayanApp/models.py:178
+msgid "T_Type"
+msgstr "نوع المعاملة"
+
+#: bayanApp/models.py:179
+msgid "T_State"
+msgstr "حالة الطلب"
+
+#: bayanApp/models.py:180
+msgid "T_Details"
+msgstr "تفاصيل المعاملة"
+
+#: bayanApp/models.py:182
+msgid "Parameter"
+msgstr ""
+
+#: bayanApp/models.py:189 bayanApp/templates/list_vendors.html:28
+msgid "Bill"
+msgstr "كشف الحساب"
+
+#: bayanApp/models.py:190
+msgid "Bills"
+msgstr "كشف الحساب"
+
+#: bayanApp/models.py:192
+msgid "B_Date"
+msgstr "تاريخ كشف الحساب"
+
+#: bayanApp/models.py:193
+msgid "B_Details"
+msgstr "تفاصيل كشف الحساب"
+
+#: bayanApp/models.py:196
+msgid "Bill_File"
+msgstr "ملف كشف الحساب"
+
+#: bayanApp/models.py:203
+msgid "Chique"
+msgstr "الشيك"
+
+#: bayanApp/models.py:204
+msgid "Chiques"
+msgstr "الشيكات"
+
+#: bayanApp/models.py:206
+msgid "C_Date"
+msgstr "تاريخ الشيك"
+
+#: bayanApp/templates/403.html:9
+msgid "don't have permission to access this page"
+msgstr "ليس لديك صلاحية للدخول لهذه الصفحة"
+
+#: bayanApp/templates/403.html:10 bayanApp/templates/404.html:10
+#: bayanApp/templates/error_filetype.html:11 bayanApp/templates/layout.html:81
+msgid "Home"
+msgstr "الرئيسية"
+
+#: bayanApp/templates/404.html:9
+msgid "this page not found"
+msgstr "الصفحة التي تحاول الوصول إليها غير متاحة"
+
+#: bayanApp/templates/change_password.html:18
+msgid "Changing Password"
+msgstr "تغيير كلمة السر"
+
+#: bayanApp/templates/change_password.html:22
+msgid "Your password cannot be identical to your other personal information"
+msgstr "لا يمكن أن تكون كلمة المرور الخاصة بك مطابقة لمعلوماتك الشخصية الأخرى"
+
+#: bayanApp/templates/change_password.html:23
+msgid "Your password should include at least 8 characters"
+msgstr "يجب أن تحتوي كلمة مرورك على 8 أحرف على الأقل"
+
+#: bayanApp/templates/change_password.html:24
+msgid "Your password cannot be a commonly used password"
+msgstr "لا يمكن أن تكون كلمة المرور الخاصة بك كلمة مرور شائعة الاستخدام"
+
+#: bayanApp/templates/change_password.html:25
+msgid "Your password cannot be just numbers"
+msgstr "لا يمكن أن تكون كلمة مرورك مجرد أرقام"
+
+#: bayanApp/templates/change_password.html:49 bayanApp/templates/home.html:71
+#: bayanApp/templates/list_newUsers.html:58
+#: bayanApp/templates/list_vendors.html:84
+#: bayanApp/templates/list_vendors.html:113
+#: bayanApp/templates/list_vendors.html:145
+#: bayanApp/templates/print_order.html:147
+#: bayanApp/templates/update_profile.html:133
+msgid "Submit"
+msgstr "حفظ"
+
+#: bayanApp/templates/chique_email.html:6
+msgid "we informed you that your Chique is Ready."
+msgstr "نحيط علم سيادتكم أن الشيك جاهز "
+
+#: bayanApp/templates/chique_email.html:7 bayanApp/templates/email.html:7
+msgid "and we send image of it in attachments"
+msgstr "و تم إرسال صورة منه في الملحقات"
+
+#: bayanApp/templates/email.html:6
+msgid "we informed you that you order no : "
+msgstr "نحيط علم سيادتكم أن الطلب رقم "
+
+#: bayanApp/templates/email.html:6
+msgid "was confirmed"
+msgstr "تم تأكيده"
+
+#: bayanApp/templates/error_filetype.html:10
+msgid "The uploaded file is not supported, please choose photo or excel file"
+msgstr "الملف المرفوع غير مدعوم, من فضلك اختر صورة او ملف اكسيل"
+
+#: bayanApp/templates/error_filetype.html:13
+msgid "The uploaded file not supported, please select image"
+msgstr "الملف المرفوع غير مدعوم, من فضلك اختر صورة"
+
+#: bayanApp/templates/error_filetype.html:16 bayanApp/validators.py:45
+msgid "File type not supported. JPEG, PNG, or pdf recommended"
+msgstr "هذا الملف غير مدعوم , من فضلك اختر صورة او ملف pdf"
+
+#: bayanApp/templates/error_filetype.html:17
+msgid "List Order"
+msgstr "عرض الطلب"
+
+#: bayanApp/templates/error_filetype.html:19 bayanApp/validators.py:56
+msgid "File type not supported. xlsx recommended"
+msgstr "هذا الملف غير مدعوم , من فضلك اختر ملف  xlsx"
+
+#: bayanApp/templates/error_filetype.html:20 bayanApp/templates/layout.html:108
+msgid "List Vendors"
+msgstr "عرض الموردين"
+
+#: bayanApp/templates/home.html:11
+msgid "Last Transactions"
+msgstr "أخر المعاملات"
+
+#: bayanApp/templates/home.html:30
+msgid "There isn't unread transactions"
+msgstr "لا يوجد معاملات جديدة"
+
+#: bayanApp/templates/home.html:35
+msgid "Show All Transactions"
+msgstr "عرض جميع المعاملات"
+
+#: bayanApp/templates/home.html:49 bayanApp/templates/home.html:61
+msgid "Upload Bill"
+msgstr "رفع كشف الحساب"
+
+#: bayanApp/templates/home.html:72 bayanApp/templates/list_newUsers.html:59
+#: bayanApp/templates/list_vendors.html:85
+#: bayanApp/templates/list_vendors.html:114
+#: bayanApp/templates/list_vendors.html:146
+#: bayanApp/templates/print_order.html:172
+#: bayanApp/templates/update_profile.html:134
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: bayanApp/templates/home.html:76 bayanApp/templates/list_vendors.html:88
+#: bayanApp/templates/list_vendors.html:117
+#: bayanApp/templates/list_vendors.html:150
+msgid "Loading"
+msgstr " جار التحميل  "
+
+#: bayanApp/templates/layout.html:8
+msgid "Bayan Co. WebSite"
+msgstr "جمعية بيان التعاونية"
+
+#: bayanApp/templates/layout.html:71 bayanApp/templates/list_vendors.html:13
+msgid "Financial"
+msgstr "الحسابات"
+
+#: bayanApp/templates/layout.html:73
+msgid "Bayan COOP Society"
+msgstr "جمعية بيان التعاونية"
+
+#: bayanApp/templates/layout.html:84
+msgid "Profile"
+msgstr "صفحتي"
+
+#: bayanApp/templates/layout.html:92 bayanApp/templates/layout.html:114
+msgid "New Order"
+msgstr "طلب جديد"
+
+#: bayanApp/templates/layout.html:93
+msgid "List Orders"
+msgstr "عرض الطلبات"
+
+#: bayanApp/templates/layout.html:99
+msgid "List Products"
+msgstr "عرض المنتجات"
+
+#: bayanApp/templates/layout.html:107 bayanApp/templates/list_newUsers.html:17
+msgid "New Users"
+msgstr "المستخدمين الجدد"
+
+#: bayanApp/templates/layout.html:126
+msgid "Welcome"
+msgstr "أهلا"
+
+#: bayanApp/templates/layout.html:130
+msgid "Logout"
+msgstr "خروج"
+
+#: bayanApp/templates/layout.html:132 bayanApp/templates/reset_password.html:42
+#: bayanApp/templates/signup.html:179
+msgid "Login"
+msgstr "تسجيل دخول"
+
+#: bayanApp/templates/list_all_orders.html:22
+#: bayanApp/templates/list_orders.html:25
+msgid "Order ID"
+msgstr "رمز الطلب"
+
+#: bayanApp/templates/list_all_orders.html:23
+#: bayanApp/templates/list_orders.html:26 bayanApp/templates/order_xo.html:23
+#: bayanApp/templates/print_order.html:38
+#: bayanApp/templates/print_order.html:137
+#: bayanApp/templates/sales_order.html:24
+msgid "Order No"
+msgstr "رقم الطلب"
+
+#: bayanApp/templates/list_all_orders.html:25
+#: bayanApp/templates/list_orders.html:27 bayanApp/templates/order_xo.html:27
+#: bayanApp/templates/print_order.html:39
+#: bayanApp/templates/sales_order.html:28
+msgid "Order Date"
+msgstr "تاريخ الطلب"
+
+#: bayanApp/templates/list_all_orders.html:26
+#: bayanApp/templates/list_orders.html:28 bayanApp/templates/order_xo.html:31
+#: bayanApp/templates/print_order.html:40
+#: bayanApp/templates/sales_order.html:32
+msgid "Order State"
+msgstr "حالة الطلب"
+
+#: bayanApp/templates/list_all_orders.html:57
+msgid "Delete Orders that are older than selected date"
+msgstr "مسح الاوامر الاقدم من هذا التاريخ"
+
+#: bayanApp/templates/list_all_orders.html:59
+#: bayanApp/templates/list_orders.html:51 bayanApp/templates/order_xo.html:75
+#: bayanApp/templates/order_xo.html:103 bayanApp/templates/order_xo.html:228
+#: bayanApp/templates/sales_order.html:182
+msgid "Remove"
+msgstr "مسح"
+
+#: bayanApp/templates/list_all_orders.html:76
+#: bayanApp/templates/list_bills.html:85
+#: bayanApp/templates/list_newUsers.html:76
+#: bayanApp/templates/list_orders.html:71
+#: bayanApp/templates/list_products.html:57
+#: bayanApp/templates/list_transactions.html:68
+#: bayanApp/templates/list_vendors.html:287
+msgid "Print Selected Columns"
+msgstr "طباعة الاعمدة المختارة"
+
+#: bayanApp/templates/list_all_orders.html:78
+#: bayanApp/templates/list_all_orders.html:97
+#: bayanApp/templates/list_bills.html:88 bayanApp/templates/list_bills.html:110
+#: bayanApp/templates/list_newUsers.html:78
+#: bayanApp/templates/list_newUsers.html:103
+#: bayanApp/templates/list_orders.html:73
+#: bayanApp/templates/list_orders.html:104
+#: bayanApp/templates/list_products.html:59
+#: bayanApp/templates/list_products.html:87
+#: bayanApp/templates/list_transactions.html:67
+#: bayanApp/templates/list_transactions.html:71
+#: bayanApp/templates/list_transactions.html:102
+#: bayanApp/templates/list_vendors.html:289
+#: bayanApp/templates/list_vendors.html:314
+msgid "Bayan Co-operative Society"
+msgstr "جمعية بيان التعاونية"
+
+#: bayanApp/templates/list_all_orders.html:82
+#: bayanApp/templates/list_all_orders.html:102
+#: bayanApp/templates/list_bills.html:92 bayanApp/templates/list_bills.html:114
+#: bayanApp/templates/list_newUsers.html:83
+#: bayanApp/templates/list_newUsers.html:108
+#: bayanApp/templates/list_orders.html:77
+#: bayanApp/templates/list_orders.html:108
+#: bayanApp/templates/list_products.html:63
+#: bayanApp/templates/list_products.html:91
+#: bayanApp/templates/list_transactions.html:74
+#: bayanApp/templates/list_transactions.html:106
+#: bayanApp/templates/list_vendors.html:294
+#: bayanApp/templates/list_vendors.html:318
+#: bayanApp/templates/print_order.html:25
+msgid "Date of Day"
+msgstr "تاريخ اليوم "
+
+#: bayanApp/templates/list_all_orders.html:84
+#: bayanApp/templates/list_all_orders.html:104
+msgid "All Orders List"
+msgstr "قائمة جميع الطلبات"
+
+#: bayanApp/templates/list_all_orders.html:95
+#: bayanApp/templates/list_newUsers.html:102
+#: bayanApp/templates/list_orders.html:103
+#: bayanApp/templates/list_products.html:86
+#: bayanApp/templates/list_transactions.html:113
+#: bayanApp/templates/list_vendors.html:313
+msgid "Print Selected Rows"
+msgstr "طباعة الصفوف  المختارة"
+
+#: bayanApp/templates/list_all_orders.html:116
+#: bayanApp/templates/list_bills.html:123
+#: bayanApp/templates/list_newUsers.html:115
+#: bayanApp/templates/list_orders.html:126
+#: bayanApp/templates/list_products.html:100
+#: bayanApp/templates/list_transactions.html:125
+#: bayanApp/templates/list_vendors.html:332
+msgid "Select Columns"
+msgstr "إختر الاعمدة للطباعة"
+
+#: bayanApp/templates/list_all_orders.html:120
+#: bayanApp/templates/list_bills.html:127
+#: bayanApp/templates/list_newUsers.html:119
+#: bayanApp/templates/list_orders.html:130
+#: bayanApp/templates/list_products.html:104
+#: bayanApp/templates/list_transactions.html:129
+#: bayanApp/templates/list_vendors.html:336
+msgid "Search"
+msgstr "بحث"
+
+#: bayanApp/templates/list_all_orders.html:121
+#: bayanApp/templates/list_bills.html:128
+#: bayanApp/templates/list_newUsers.html:120
+#: bayanApp/templates/list_orders.html:131
+#: bayanApp/templates/list_products.html:105
+#: bayanApp/templates/list_transactions.html:130
+#: bayanApp/templates/list_vendors.html:337
+msgid "No data available in table"
+msgstr "لا يوجد بيانات متاحه"
+
+#: bayanApp/templates/list_all_orders.html:123
+#: bayanApp/templates/list_bills.html:130
+#: bayanApp/templates/list_newUsers.html:122
+#: bayanApp/templates/list_orders.html:133
+#: bayanApp/templates/list_products.html:107
+#: bayanApp/templates/list_transactions.html:132
+#: bayanApp/templates/list_vendors.html:339
+msgid "Previous"
+msgstr "الصفحة السابقة"
+
+#: bayanApp/templates/list_all_orders.html:124
+#: bayanApp/templates/list_bills.html:131
+#: bayanApp/templates/list_newUsers.html:123
+#: bayanApp/templates/list_orders.html:134
+#: bayanApp/templates/list_products.html:108
+#: bayanApp/templates/list_transactions.html:133
+#: bayanApp/templates/list_vendors.html:340
+msgid "Next"
+msgstr "الصفحة التالية"
+
+#: bayanApp/templates/list_bills.html:25
+#: bayanApp/templates/list_products.html:24
+msgid "ID"
+msgstr "المسلسل"
+
+#: bayanApp/templates/list_bills.html:26
+msgid "Bills Date"
+msgstr "تاريخ كشف الحساب"
+
+#: bayanApp/templates/list_bills.html:27
+msgid "Bills File"
+msgstr "ملف كشف الحساب"
+
+#: bayanApp/templates/list_bills.html:36
+#: bayanApp/templates/list_newUser_info.html:59
+#: bayanApp/templates/list_newUser_info.html:71
+#: bayanApp/templates/list_newUser_info.html:82
+#: bayanApp/templates/list_newUser_info.html:96
+#: bayanApp/templates/list_newUser_info.html:109
+#: bayanApp/templates/list_newUser_info.html:122
+#: bayanApp/templates/list_newUser_info.html:135
+#: bayanApp/templates/list_newUser_info.html:148
+#: bayanApp/templates/list_newUser_info.html:159
+#: bayanApp/templates/list_newUser_info.html:171
+#: bayanApp/templates/list_newUser_info.html:183
+#: bayanApp/templates/list_vendor_info.html:61
+#: bayanApp/templates/list_vendor_info.html:72
+#: bayanApp/templates/list_vendor_info.html:83
+#: bayanApp/templates/list_vendor_info.html:97
+#: bayanApp/templates/list_vendor_info.html:110
+#: bayanApp/templates/list_vendor_info.html:123
+#: bayanApp/templates/list_vendor_info.html:136
+#: bayanApp/templates/list_vendor_info.html:149
+#: bayanApp/templates/list_vendor_info.html:163
+#: bayanApp/templates/list_vendor_info.html:174
+#: bayanApp/templates/list_vendor_info.html:185
+#: bayanApp/templates/profile.html:61 bayanApp/templates/profile.html:73
+#: bayanApp/templates/profile.html:85 bayanApp/templates/profile.html:96
+#: bayanApp/templates/profile.html:107 bayanApp/templates/profile.html:118
+#: bayanApp/templates/profile.html:128 bayanApp/templates/profile.html:137
+#: bayanApp/templates/profile.html:147 bayanApp/templates/profile.html:156
+#: bayanApp/templates/profile.html:165
+msgid "show"
+msgstr "عرض"
+
+#: bayanApp/templates/list_bills.html:94 bayanApp/templates/list_bills.html:116
+msgid "All Bills List"
+msgstr "قائمة كشف الحساب"
+
+#: bayanApp/templates/list_bills.html:107
+msgid "Print Selected rows"
+msgstr "طباعة الصفوف  المختارة"
+
+#: bayanApp/templates/list_newUser_info.html:27
+#: bayanApp/templates/list_vendor_info.html:29
+#: bayanApp/templates/profile.html:20
+msgid "Full Name"
+msgstr "الإسم الكامل"
+
+#: bayanApp/templates/list_newUser_info.html:62
+#: bayanApp/templates/list_newUser_info.html:74
+#: bayanApp/templates/list_newUser_info.html:86
+#: bayanApp/templates/list_newUser_info.html:99
+#: bayanApp/templates/list_newUser_info.html:112
+#: bayanApp/templates/list_newUser_info.html:125
+#: bayanApp/templates/list_newUser_info.html:138
+#: bayanApp/templates/list_newUser_info.html:151
+#: bayanApp/templates/list_newUser_info.html:163
+#: bayanApp/templates/list_newUser_info.html:174
+#: bayanApp/templates/list_newUser_info.html:186
+#: bayanApp/templates/list_newUser_info.html:192
+#: bayanApp/templates/list_vendor_info.html:64
+#: bayanApp/templates/list_vendor_info.html:75
+#: bayanApp/templates/list_vendor_info.html:87
+#: bayanApp/templates/list_vendor_info.html:100
+#: bayanApp/templates/list_vendor_info.html:113
+#: bayanApp/templates/list_vendor_info.html:126
+#: bayanApp/templates/list_vendor_info.html:139
+#: bayanApp/templates/list_vendor_info.html:152
+#: bayanApp/templates/list_vendor_info.html:166
+#: bayanApp/templates/list_vendor_info.html:177
+#: bayanApp/templates/list_vendor_info.html:188
+#: bayanApp/templates/print_order.html:171
+msgid "Print"
+msgstr "طباعة"
+
+#: bayanApp/templates/list_newUser_info.html:156
+#: bayanApp/templates/list_vendor_info.html:159
+#: bayanApp/templates/profile.html:142
+msgid "Federation of Associations"
+msgstr "تعميم إتحاد جمعيات"
+
+#: bayanApp/templates/list_newUsers.html:16 bayanApp/templates/order_xo.html:67
+#: bayanApp/templates/print_order.html:70
+msgid "Serial"
+msgstr "م"
+
+#: bayanApp/templates/list_newUsers.html:40
+#: bayanApp/templates/list_vendors.html:72
+msgid "Upload Products List"
+msgstr "رفع قائمة المنتجات"
+
+#: bayanApp/templates/list_newUsers.html:50
+#: bayanApp/templates/list_vendors.html:78
+msgid "Vendor Code"
+msgstr "رمز المورد"
+
+#: bayanApp/templates/list_newUsers.html:85
+#: bayanApp/templates/list_newUsers.html:110
+msgid "New Users List"
+msgstr "قائمة المستخدمين الجدد"
+
+#: bayanApp/templates/list_orders.html:31
+msgid "Delete"
+msgstr "مسح"
+
+#: bayanApp/templates/list_orders.html:79
+#: bayanApp/templates/list_orders.html:110
+#: bayanApp/templates/list_transactions.html:76
+#: bayanApp/templates/list_transactions.html:108
+msgid "Vendor Orders Report"
+msgstr "قائمة طلبات المورد"
+
+#: bayanApp/templates/list_products.html:25
+msgid "Name"
+msgstr "الإسم"
+
+#: bayanApp/templates/list_products.html:26
+msgid "pack id"
+msgstr "رمز الشد"
+
+#: bayanApp/templates/list_products.html:27
+msgid "no of items"
+msgstr "الشد"
+
+#: bayanApp/templates/list_products.html:28
+msgid "unit desc"
+msgstr "الوحدة"
+
+#: bayanApp/templates/list_products.html:29
+msgid "purch price"
+msgstr "سعر الشراء"
+
+#: bayanApp/templates/list_products.html:30
+msgid "sale price"
+msgstr "سعر الخصم"
+
+#: bayanApp/templates/list_products.html:31
+msgid "barcode"
+msgstr "الرمز الشريطي"
+
+#: bayanApp/templates/list_products.html:65
+msgid "Vendor Products List"
+msgstr "تقرير أصناف الموردين"
+
+#: bayanApp/templates/list_products.html:93
+msgid "Vendors Products List"
+msgstr "تقرير أصناف الموردين"
+
+#: bayanApp/templates/list_transactions.html:28
+msgid "Transaction No"
+msgstr "رقم المعاملة"
+
+#: bayanApp/templates/list_transactions.html:29
+msgid "Transaction Date"
+msgstr "تاريخ المعاملة"
+
+#: bayanApp/templates/list_transactions.html:30
+msgid "Transaction Type"
+msgstr "نوع المعاملة"
+
+#: bayanApp/templates/list_transactions.html:31
+msgid "Transaction Details"
+msgstr "تفاصيل المعاملة"
+
+#: bayanApp/templates/list_transactions.html:32
+msgid "Transaction state"
+msgstr "حالة المعاملة"
+
+#: bayanApp/templates/list_vendors.html:16
+msgid "Upload All Products"
+msgstr "رفع قائمة جميع  المنتجات"
+
+#: bayanApp/templates/list_vendors.html:29
+#: bayanApp/templates/list_vendors.html:132
+msgid "Upload Chique"
+msgstr "رفع الشيك"
+
+#: bayanApp/templates/list_vendors.html:44
+#: bayanApp/templates/list_vendors.html:47
+#: bayanApp/templates/list_vendors.html:54
+msgid "List"
+msgstr "عرض"
+
+#: bayanApp/templates/list_vendors.html:50
+#: bayanApp/templates/list_vendors.html:57
+msgid "Upload"
+msgstr "رفع"
+
+#: bayanApp/templates/list_vendors.html:103
+msgid "Upload products Sheet"
+msgstr "رفع قائمة المنتجات"
+
+#: bayanApp/templates/list_vendors.html:296
+#: bayanApp/templates/list_vendors.html:320
+msgid "Vendors List"
+msgstr "قائمة الموردين"
+
+#: bayanApp/templates/login.html:33
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: bayanApp/templates/login.html:37
+msgid "Log in"
+msgstr "دخول"
+
+#: bayanApp/templates/login.html:40
+msgid "Don't have account ?"
+msgstr "لاتمتلك حساب"
+
+#: bayanApp/templates/login.html:42
+msgid "Signup"
+msgstr "إنشاء حساب جديد"
+
+#: bayanApp/templates/login.html:47 bayanApp/templates/reset_password.html:29
+#: bayanApp/templates/reset_password.html:38
+msgid "Reset Password"
+msgstr "إستعادة كلمة المرور"
+
+#: bayanApp/templates/login.html:67 bayanApp/templates/reset_password.html:62
+#: bayanApp/templates/reset_password_sent.html:41
+msgid "All rights reserved to Al-Ibrahim Gulf Company"
+msgstr "جميع الحقوق محفوظة لشركة الإبراهيم الخليجية"
+
+#: bayanApp/templates/order_xo.html:57 bayanApp/templates/print_order.html:64
+#: bayanApp/templates/sales_order.html:55
+msgid "Items Informations"
+msgstr "بيانات الأصناف"
+
+#: bayanApp/templates/order_xo.html:68 bayanApp/templates/print_order.html:71
+msgid "Item"
+msgstr "المنتج"
+
+#: bayanApp/templates/order_xo.html:69 bayanApp/templates/print_order.html:72
+msgid "Code"
+msgstr "رمز الشد"
+
+#: bayanApp/templates/order_xo.html:70
+msgid "Desc"
+msgstr "الوحدة"
+
+#: bayanApp/templates/order_xo.html:71 bayanApp/templates/print_order.html:74
+msgid "Count"
+msgstr "الشد"
+
+#: bayanApp/templates/order_xo.html:72 bayanApp/templates/print_order.html:75
+msgid "Quantity"
+msgstr "الكمية"
+
+#: bayanApp/templates/order_xo.html:73 bayanApp/templates/print_order.html:76
+msgid "Price"
+msgstr "السعر"
+
+#: bayanApp/templates/order_xo.html:74 bayanApp/templates/print_order.html:77
+msgid "Total"
+msgstr "الإجمالية"
+
+#: bayanApp/templates/order_xo.html:82 bayanApp/templates/order_xo.html:210
+#: bayanApp/templates/sales_order.html:164
+msgid "Please Select Item"
+msgstr "من فضلك إختر منتج"
+
+#: bayanApp/templates/order_xo.html:90 bayanApp/templates/order_xo.html:216
+#: bayanApp/templates/sales_order.html:170
+msgid "Please select a valid Item."
+msgstr "اختر منتج صحيح"
+
+#: bayanApp/templates/order_xo.html:98
+msgid "Please Enter Quantity"
+msgstr "ادخل الكمية"
+
+#: bayanApp/templates/order_xo.html:109 bayanApp/templates/sales_order.html:65
+msgid "Save"
+msgstr "حفظ"
+
+#: bayanApp/templates/print_order.html:16
+msgid "Purchase Order"
+msgstr "طلــــب شـــــراء"
+
+#: bayanApp/templates/print_order.html:73
+msgid "Description"
+msgstr "الوصف"
+
+#: bayanApp/templates/print_order.html:101
+msgid "Print Order"
+msgstr "طباعة الطلب"
+
+#: bayanApp/templates/print_order.html:109
+msgid "Delete Order"
+msgstr "مسح الطلب"
+
+#: bayanApp/templates/print_order.html:113
+msgid "Upload Order"
+msgstr "رفع الطلب"
+
+#: bayanApp/templates/print_order.html:117
+#: bayanApp/templates/print_order.html:264
+msgid "Show Confirmed Order"
+msgstr "إظهار الطلبات المؤكدة"
+
+#: bayanApp/templates/print_order.html:127
+msgid "Upload Confirmed Order"
+msgstr "رفع الطلبات المؤكدة"
+
+#: bayanApp/templates/print_order.html:148
+msgid "Close"
+msgstr "غلق"
+
+#: bayanApp/templates/print_order.html:164
+msgid "Confirmed Order"
+msgstr "الطلبات المؤكدة"
+
+#: bayanApp/templates/print_order.html:268
+msgid "Hide Confirmed Order"
+msgstr "إخفاء الطلبات المؤكدة"
+
+#: bayanApp/templates/print_order.html:277
+msgid "Show Chique"
+msgstr "إظهار الشيك"
+
+#: bayanApp/templates/print_order.html:281
+msgid "Hide Chique"
+msgstr "إخفاء الشيك"
+
+#: bayanApp/templates/profile.html:52 bayanApp/templates/update_profile.html:71
+msgid "Required Papers"
+msgstr "الأوراق المطلوبة"
+
+#: bayanApp/templates/profile.html:172
+msgid "Edit"
+msgstr "تعديل"
+
+#: bayanApp/templates/profile.html:174
+msgid "Change Password"
+msgstr "تغيير كلمة السر"
+
+#: bayanApp/templates/reset_password.html:30
+msgid ""
+"Have you lost your password? Enter your email address below and we will send "
+"you instructions for obtaining a new password."
+msgstr ""
+"من فضلك، قم بإدخال عنوان بريدك الإلكتروني، وستصلك رسالة بها رابط لإعادة "
+"تعيين كلمة المرور."
+
+#: bayanApp/templates/reset_password_sent.html:27
+msgid "Password reset has been sent"
+msgstr "إعادة ضبط كلمة المرور تم ارسالها"
+
+#: bayanApp/templates/reset_password_sent.html:28
+msgid ""
+"An email has been sent with instructions to set your password, in case an "
+"account exists with the same email you entered. You will receive e-mail soon"
+msgstr ""
+"تم إرسال بريد إلكتروني بالتعليمات لضبط كلمة المرور الخاصة بك, في حال تواجد "
+"حساب بنفس البريد الإلكتروني الذي ادخلته. سوف تستقبل البريد الإلكتروني قريباً"
+
+#: bayanApp/templates/reset_password_sent.html:29
+msgid ""
+"In case the e-mail is not received, please ensure that your e-mail address "
+"is entered correctly and review the spam folder."
+msgstr ""
+"في حال عدم إستقبال البريد الإلكتروني، الرجاء التأكد من إدخال عنوان بريدك "
+"الإلكتروني بشكل صحيح ومراجعة مجلد الرسائل غير المرغوب فيها."
+
+#: bayanApp/templates/signup.html:28
+msgid "Bayan Co. Signup"
+msgstr "الدخول لموقع بيان"
+
+#: bayanApp/templates/signup.html:101
+msgid "Papers Needed to complete Registration"
+msgstr "الاوراق المطلوبة لإستكمال الإلتحاق"
+
+#: bayanApp/templates/signup.html:179
+msgid "Already have account ?"
+msgstr "تمتلك حساب مسبقا ؟ "
+
+#: bayanApp/templates/signup.html:184
+msgid "Sign Up"
+msgstr "إنشاء حساب جديد"
+
+#: bayanApp/validators.py:35
+msgid "File type not supported. JPEG, PNG recommended"
+msgstr "هذا الملف غير مدعوم , من فضلك اختر صورة JPEG or PNG"
+
+#: bayanApp/views.py:43 bayanApp/views.py:139 bayanApp/views.py:201
+#: bayanApp/views.py:216 bayanApp/views.py:264 bayanApp/views.py:337
+#: bayanApp/views.py:356 bayanApp/views.py:440 bayanApp/views.py:464
+
+#: bayanApp/views.py:68
+msgid "User is not active"
+msgstr "المستخدم غير مفعل"
+
+#: bayanApp/views.py:70
+msgid "Username OR Password is incorrect"
+msgstr "إسم المستخدم او كلمة السر غير صحيحة"
+
+#: bayanApp/views.py:72 bayanApp/views.py:449
+msgid "Account does not exist"
+msgstr "المستخدم غير موجود"
+
+#: bayanApp/views.py:167 bayanApp/views.py:193 bayanApp/views.py:201
+#: bayanApp/views.py:216 bayanApp/views.py:229 bayanApp/views.py:274
+#: bayanApp/views.py:283 bayanApp/views.py:289 bayanApp/views.py:298
+#: bayanApp/views.py:305 bayanApp/views.py:356 bayanApp/views.py:372
+#: bayanApp/views.py:406 bayanApp/views_deploy.py:27
+msgid "sales"
+msgstr "المشتريات"
+
+#: bayanApp/views.py:283 bayanApp/views.py:298 bayanApp/views.py:312
+#: bayanApp/views.py:471 bayanApp/views_deploy.py:28
+msgid "financials"
+msgstr "الحسابات"
+
+#: bayanApp/views_deploy.py:25
+msgid "admins"
+msgstr "المديرين"
+
+#: bayanApp/views_deploy.py:26
+msgid "vendors"
+msgstr "الموردين"
+
+#: bayanApp/views_deploy.py:29
+msgid "users"
+msgstr "المستخدمين"
+

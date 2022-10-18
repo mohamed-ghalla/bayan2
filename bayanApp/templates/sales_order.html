@@ -1,0 +1,238 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+    <!-- searchable select -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- ################################-->
+</head>
+
+<section id="ibr-order" class="page-wrapper">
+	{{error}}
+  <form id="my_form" method="POST" action="" class="needs-validation" enctype="multipart/form-data"> <!--novalidate -->
+    {% csrf_token %}
+    <div class="form-row ">
+      <div class="form-group col-sm-4"> 
+        <label for="">{% trans "Order No" %}</label>
+        <input type="" class="form-control" id="" placeholder="" value="{{order_no}}" name="order_no" readonly>
+      </div> 
+      <div class="form-group col-sm-4">
+        <label for="inputPassword4">{% trans "Order Date" %}</label>
+        <input type="" class="form-control"  id="" placeholder="" value={{date}} name="order_date" readonly>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="">{% trans "Order State" %}</label>
+	<input type="" class="form-control" id="" value="{% trans 'Closed' %}" name="order_state" readonly>
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-sm-6">
+        <label for="">{% trans "Location" %}</label>
+          {% render_field form.location class+="form-control" %}
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="">{% trans "Vendor" %}</label>
+        {% render_field form.VEND_DESC_ARABIC class+="form-control" %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="">{% trans "Notes" %}</label>
+          {% render_field form.notes|attr:"rows:3" class+="form-control" %}
+      </div>
+    </div>
+    <h4 class="card-header text-center text-uppercase py-2">{% trans "Items Informations" %}</h4>
+    <div class="row">
+      <div class="col-sm-6">	    
+        {% render_field  form.image_data class+="form-control" %}
+      </div>
+      <div class="col-sm-6 text-danger">
+	{{ form.image_data.errors }}
+      </div>
+    </div>
+    <div class="action-btns pt-3">
+      <input type="submit" id="sales_order_save" class="btn btn-primary btn-md" value='{% trans "Save" %}'>
+    </div>
+    <div id="sales_order_spinner" >
+       <button class="btn btn-sm btn-primary" type="button" disabled>
+         {% trans "Loading" %} ... <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+       </button>
+    </div>
+    
+  </form>
+</section>
+<script src="{% static 'js/upload.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script type="text/javascript">
+
+var $TABLE = $("#table");
+var $BTN = $('#export-btn');
+var $EXPORT = $('#export');
+var serial = 1 ;
+// Material Select Initialization
+$(document).ready(function() {
+//	$('.select_item').select2({
+////  placeholder: '',
+//  allowClear: true
+//});
+// $('.mdb-select').materialSelect();
+});
+
+//$('#my_form').submit(function(){
+//    var yy = convertTableToJson();
+//    document.getElementById("table_data").value = yy;
+//    alert("Are You Sure ?");
+//    return true;
+//});
+// ############################################################
+
+//$('.table-add').click(function () {
+//serial++;
+//$TABLE.find('table').append(trString(serial));
+
+//var lastTr = $TABLE.find('table tr').last();
+//	$('.select_item').select2({
+////  placeholder: '',
+//  allowClear: true
+//});
+//lastTr.find('.button_remove').click(removeFunc);
+//lastTr.find('.mdb-select').materialSelect();
+//});
+
+// ############################################################
+
+//$('.button_remove').click(removeFunc);
+//function removeFunc () {
+//$(this).parents('tr').detach();
+////serial--;
+//};
+
+// A few jQuery helpers for exporting only
+//jQuery.fn.pop = [].pop;
+//jQuery.fn.shift = [].shift;
+
+// 
+
+// $BTN.click(function () {
+//var convertTableToJson = function(){
+//var $rows = $TABLE.find('tr:not(:hidden)');
+//var headers = [];
+//var data = [];
+// Get the headers (add special header logic here)
+//$($rows.shift()).find('th:not(:empty)').each(function () {
+//headers.push($(this).text().toLowerCase());
+//});
+
+// Turn all existing rows into a loopable array
+//$rows.each(function () {
+//var $td = $(this).find('td');
+//var h = {};
+
+// Use the headers from earlier to name our hash keys
+//headers.forEach(function (header, i) {
+//if (i == 1){
+//  h[header] = $td.eq(i).find('option:selected').text().split("________")[0];
+//}
+//else if (i == 5){
+//  h[header] = $td.eq(i).find("input").val();
+
+//}
+//else {
+//  h[header] = $td.eq(i).text();
+//  }
+
+//});
+//data.push(h);
+//});
+
+// Output the result
+//$EXPORT.text(JSON.stringify(data));
+//return JSON.stringify(data);
+//};
+
+//var trString = function(serial){
+
+//var templateString = `
+//	<tr>
+//	<td class="col_td serial" contenteditable="false">${serial}</td>
+//	<td class="select_td" contenteditable="false">
+//	<select class="select_item mdb-select form-control" onchange="selectFunction(this)" required>
+//	<option value="" disabled selected>{% trans 'Please Select Item' %}</option>
+//	{% for i in items %}
+//	  <option value="{{i.PACK_ID}}-{{i.UNIT_DESC}}-{{i.NO_OF_ITEMS}}-{{i.PURCH_PRICE}}-${serial}" >{{i.ARABIC_NAME}} ________ {{i.UNIT_DESC}}</option>
+//	  {% endfor %}
+//	</select>
+//	<div class="invalid-feedback">
+//	  {% trans "Please select a valid Item." %}
+//	</div>
+//	</td>
+//	<td class="col_td" contenteditable="false" id="code_${serial}"></td>
+//	<td class="col_td" contenteditable="false" id="desc_${serial}"></td>
+//	<td class="col_td" contenteditable="false" id="no_item_${serial}"></td>
+//	<td class="col_td" contenteditable="false" id="" >
+//	  {% render_field form.quantity|attr:"id:quantity_${serial}" onchange="total_function(this)"  class+="form-control quantity_in" %}
+//	</td>
+//	<td class="col_td" contenteditable="false" id="price_${serial}"></td>
+//	<td class="col_td" contenteditable="false" id="total_${serial}" required></td>
+//	<td class="col_td">
+//	  <a type="button" class="button_remove btn btn-danger btn-rounded btn-sm my-0">{% trans "Remove" %}</a></span>
+//	</td>
+//	</tr>`;
+//	return templateString ;
+//};
+/////////////////////////////////////////////////////////////////////////////////////////////
+//var selectFunction = function(element){
+//	$(`#code_${serial}`).val($(element).find("option:selected").val());
+//        var str = $(element).find("option:selected").val();
+//        var res = str.split("-");
+//	var x = res[4];
+//	$(`#code_${x}`).text(res[0]);
+//        $(`#desc_${x}`).text(res[1]);
+//        $(`#no_item_${x}`).text(res[2]);
+//        $(`#price_${x}`).text(res[3]);
+//	$(`#total_${x}`).text((Number($('#price_'+x).text()) * Number($('#quantity_'+x).val())).toPrecision(4));
+//};
+
+//var total_function = function(element){
+//	//$('#total_'+serial).text(Number($('#price_'+serial).text()) * Number($('#quantity_'+serial).text()));
+//	var str = $(element).attr('id');
+//	alert(str);
+//	var x = str.split("_");
+//	var y = x[1];
+//	$('#total_'+y).text((Number($('#price_'+y).text()) * Number($('#quantity_'+y).val())).toPrecision(4));
+//};
+
+</script>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+//(function() {
+//  'use strict';
+//  window.addEventListener('load', function() {
+//    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//    var forms = document.getElementsByClassName('needs-validation');
+//    // Loop over them and prevent submission
+//    var validation = Array.prototype.filter.call(forms, function(form) {
+//      form.addEventListener('submit', function(event) {
+//        if (form.checkValidity() == false) {
+//          event.preventDefault();
+//          event.stopPropagation();
+//        }
+//        form.classList.add('was-validated');
+//      }, false);
+//    });
+//  }, false);
+//})();
+</script>
+
+{% endblock %}

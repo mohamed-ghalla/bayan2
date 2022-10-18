@@ -1,0 +1,143 @@
+<!doctype html>
+{% load cache %}
+{% cache 500 sidebar request.user.username %}
+{% endcache %}
+{% load static %}
+{% load i18n %}
+<html dir="rtl" lang="ar">
+<title>{% trans "Bayan Co. WebSite" %}</title>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- my style -->
+  <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/print.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/buttons.dataTables.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- responsive data table style --> 
+  <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap5.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/fixedHeader.bootstrap.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/responsive.bootstrap.min.css' %}"> 
+
+<!-- Material Design Bootstrap -->
+  <!-- Bootstrap core CSS -->
+  <!-- Font Awesome -->
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/fontcss.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/fontcss2.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css/fontcss3.css' %}"> 
+  <!-- searchable select -->
+  <link rel="stylesheet" href="{% static 'css/selectize.bootstrap3.min.css' %}" />
+  <!-- ################################-->
+  <!-- custom style -->
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.form.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/dataTables.buttons.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/buttons.print.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/buttons.colVis.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/dataTables.select.min.js' %}"></script>
+
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/selectize.min.js' %}" ></script>
+
+
+  <!-- responsive data table -->
+  <script type="text/javascript" src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/dataTables.fixedHeader.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/dataTables.responsive.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/responsive.bootstrap.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/d3.min.js' %}"></script>
+  <script src="{% static 'js/kitfont.js' %}" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  {% trans "Vendor" as v %}
+  {% trans "Sales" as s %}
+  {% trans "Financial" as f %}
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">{% trans "Bayan COOP Society" %}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home"></i> {% trans "Home"   %} <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile'%}">{% trans "Profile" %}</a>
+        </li>
+        {% if request.user.person_type == v %}
+	  {% if request.user.VEND_CODE %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">{% trans "Orders" %}</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'order' %}">{% trans "New Order" %}</a>
+                <a class="dropdown-item" href="{% url 'list_orders' VEND_CODE=request.user.VEND_CODE %}">{% trans "List Orders" %}</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">{% trans "Products" %}</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'list_products' VEND_CODE=request.user.VEND_CODE %}">{% trans "List Products" %}</a>
+              </div>
+            </li>
+	  {% endif %}
+        {% elif request.user.person_type == s %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">{% trans "Vendors" %}</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'list_newUsers' %}">{% trans "New Users" %}</a>
+              <a class="dropdown-item" href="{% url 'list_vendors' %}">{% trans "List Vendors" %}</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">{% trans "Orders" %}</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'sales_order' %}">{% trans "New Order" %}</a>
+              <a class="dropdown-item" href="{% url 'list_all_orders' %}">{% trans "Orders" %}</a>
+            </div>
+          </li>	
+        {% elif request.user.person_type == f  %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'list_vendors' %}">{% trans "Vendors" %}<span class="sr-only">(current)</span></a>
+          </li>
+        {% endif %}
+      </ul>
+      <span class="navbar-text d-flex align-items-center">
+        {% if request.user.username %}
+          {% trans "Welcome" %}
+          <a class="nav-link" href="{% url 'profile' %}"><i class="fas fa-user-circle"></i>
+	    {% if request.user.first_name %}{{request.user.first_name}}{% else %}{{request.user}} {% endif %}
+	  </a>
+          <a class="nav-link link-logout" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> {% trans "Logout" %}</a>
+        {% else %}
+          <a class="nav-link link-logout" href="{% url 'login' %}"><i class="fas fa-sign-out-alt"></i> {% trans "Login" %}</a>
+        {% endif %}
+      </span>
+    </div>
+  </nav>
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,1237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 13:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: bayanApp/admin.py:15
+msgid "Bayan Co. Administration"
+msgstr ""
+
+#: bayanApp/admin.py:39 bayanApp/forms.py:29 bayanApp/forms.py:44
+#: bayanApp/forms.py:71 bayanApp/forms.py:84 bayanApp/models.py:27
+#: bayanApp/models.py:64 bayanApp/templates/home.html:7
+#: bayanApp/templates/layout.html:69 bayanApp/templates/list_all_orders.html:24
+#: bayanApp/templates/list_orders.html:19 bayanApp/templates/order_xo.html:43
+#: bayanApp/templates/print_order.html:104 bayanApp/templates/profile.html:15
+#: bayanApp/templates/sales_order.html:43 bayanApp/templates/signup.html:94
+#: bayanApp/templates/update_profile.html:17 bayanApp/views.py:80
+#: bayanApp/views.py:209 bayanApp/views.py:372 bayanApp/views_deploy.py:62
+msgid "Vendor"
+msgstr ""
+
+#: bayanApp/forms.py:14
+msgid "old_password"
+msgstr ""
+
+#: bayanApp/forms.py:15
+msgid "new_password1"
+msgstr ""
+
+#: bayanApp/forms.py:16
+msgid "new_password2"
+msgstr ""
+
+#: bayanApp/forms.py:29 bayanApp/forms.py:71 bayanApp/models.py:27
+#: bayanApp/views_deploy.py:43
+msgid "Admin"
+msgstr ""
+
+#: bayanApp/forms.py:29 bayanApp/forms.py:71 bayanApp/models.py:27
+#: bayanApp/models.py:80 bayanApp/templates/layout.html:70
+#: bayanApp/templates/list_vendors.html:12
+#: bayanApp/templates/print_order.html:103 bayanApp/views.py:202
+#: bayanApp/views_deploy.py:67
+msgid "Sales"
+msgstr ""
+
+#: bayanApp/forms.py:29 bayanApp/forms.py:71 bayanApp/models.py:27
+#: bayanApp/models.py:91
+msgid "Accounts"
+msgstr ""
+
+#: bayanApp/forms.py:30 bayanApp/models.py:28
+msgid "not vendor"
+msgstr ""
+
+#: bayanApp/forms.py:30 bayanApp/forms.py:72 bayanApp/models.py:28
+msgid "vegetables"
+msgstr ""
+
+#: bayanApp/forms.py:30 bayanApp/forms.py:72 bayanApp/models.py:28
+msgid "beautify"
+msgstr ""
+
+#: bayanApp/forms.py:30 bayanApp/forms.py:72 bayanApp/models.py:28
+#: bayanApp/models.py:29
+msgid "Families supplies"
+msgstr ""
+
+#: bayanApp/forms.py:31 bayanApp/forms.py:73 bayanApp/models.py:29
+msgid "Markets and branches"
+msgstr ""
+
+#: bayanApp/forms.py:34 bayanApp/forms.py:75
+msgid "First Name"
+msgstr ""
+
+#: bayanApp/forms.py:35 bayanApp/forms.py:76
+msgid "Last Name"
+msgstr ""
+
+#: bayanApp/forms.py:36 bayanApp/forms.py:77
+#: bayanApp/templates/list_newUser_info.html:31
+#: bayanApp/templates/list_vendor_info.html:33 bayanApp/templates/login.html:29
+#: bayanApp/templates/login.html:30 bayanApp/templates/profile.html:24
+msgid "Username"
+msgstr ""
+
+#: bayanApp/forms.py:37 bayanApp/forms.py:78
+#: bayanApp/templates/list_newUser_info.html:35
+#: bayanApp/templates/list_vendor_info.html:37
+#: bayanApp/templates/profile.html:28
+msgid "Email"
+msgstr ""
+
+#: bayanApp/forms.py:41 bayanApp/forms.py:79 bayanApp/models.py:32
+#: bayanApp/templates/list_newUser_info.html:43
+#: bayanApp/templates/list_vendor_info.html:41
+#: bayanApp/templates/profile.html:32
+msgid "Phone"
+msgstr ""
+
+#: bayanApp/forms.py:42 bayanApp/forms.py:82
+#: bayanApp/templates/list_newUser_info.html:39
+#: bayanApp/templates/list_newUsers.html:18
+#: bayanApp/templates/list_vendor_info.html:53
+#: bayanApp/templates/profile.html:45
+msgid "The trade name of the company"
+msgstr ""
+
+#: bayanApp/forms.py:43 bayanApp/forms.py:83 bayanApp/models.py:50
+#: bayanApp/templates/list_newUser_info.html:50
+#: bayanApp/templates/list_vendor_info.html:49
+#: bayanApp/templates/profile.html:41
+msgid "Type of Supply"
+msgstr ""
+
+#: bayanApp/forms.py:44 bayanApp/forms.py:84 bayanApp/models.py:49
+#: bayanApp/templates/list_newUser_info.html:46
+#: bayanApp/templates/list_vendor_info.html:45
+#: bayanApp/templates/profile.html:36
+msgid "Person Type"
+msgstr ""
+
+#: bayanApp/forms.py:46
+msgid "password1"
+msgstr ""
+
+#: bayanApp/forms.py:47
+msgid "passowrd2"
+msgstr ""
+
+#: bayanApp/forms.py:49 bayanApp/forms.py:86 bayanApp/models.py:37
+#: bayanApp/templates/list_newUser_info.html:56
+#: bayanApp/templates/list_vendor_info.html:58
+#: bayanApp/templates/profile.html:56
+msgid "Sign Auth"
+msgstr ""
+
+#: bayanApp/forms.py:50 bayanApp/forms.py:87 bayanApp/models.py:38
+#: bayanApp/templates/list_newUser_info.html:68
+#: bayanApp/templates/list_vendor_info.html:69
+#: bayanApp/templates/profile.html:68
+msgid "Trade Book"
+msgstr ""
+
+#: bayanApp/forms.py:51 bayanApp/forms.py:88 bayanApp/models.py:39
+#: bayanApp/templates/list_newUser_info.html:79
+#: bayanApp/templates/list_vendor_info.html:80
+#: bayanApp/templates/profile.html:80
+msgid "Chamber Book"
+msgstr ""
+
+#: bayanApp/forms.py:52 bayanApp/forms.py:89 bayanApp/models.py:40
+#: bayanApp/templates/list_newUser_info.html:93
+#: bayanApp/templates/list_vendor_info.html:94
+#: bayanApp/templates/profile.html:91
+msgid "Trade Mark"
+msgstr ""
+
+#: bayanApp/forms.py:53 bayanApp/forms.py:90 bayanApp/models.py:41
+#: bayanApp/templates/list_newUser_info.html:106
+#: bayanApp/templates/list_vendor_info.html:107
+#: bayanApp/templates/profile.html:102
+msgid "Import License"
+msgstr ""
+
+#: bayanApp/forms.py:54 bayanApp/forms.py:91 bayanApp/models.py:42
+#: bayanApp/templates/list_newUser_info.html:119
+#: bayanApp/templates/list_vendor_info.html:120
+#: bayanApp/templates/profile.html:113
+msgid "Healthy Preview"
+msgstr ""
+
+#: bayanApp/forms.py:55 bayanApp/forms.py:92 bayanApp/models.py:43
+#: bayanApp/templates/list_newUser_info.html:132
+#: bayanApp/templates/list_vendor_info.html:133
+#: bayanApp/templates/profile.html:124
+msgid "Agency Book"
+msgstr ""
+
+#: bayanApp/forms.py:56 bayanApp/forms.py:93 bayanApp/models.py:44
+#: bayanApp/templates/list_newUser_info.html:145
+#: bayanApp/templates/list_vendor_info.html:146
+#: bayanApp/templates/profile.html:133
+msgid "Varieties Revealed"
+msgstr ""
+
+#: bayanApp/forms.py:57 bayanApp/forms.py:94 bayanApp/models.py:45
+#: bayanApp/templates/list_newUser_info.html:168
+#: bayanApp/templates/list_vendor_info.html:171
+#: bayanApp/templates/profile.html:152
+msgid "Customs Declaration"
+msgstr ""
+
+#: bayanApp/forms.py:58 bayanApp/forms.py:95 bayanApp/models.py:46
+#: bayanApp/templates/list_newUser_info.html:180
+#: bayanApp/templates/list_vendor_info.html:182
+#: bayanApp/templates/profile.html:161
+msgid "Industrial Facility"
+msgstr ""
+
+#: bayanApp/forms.py:59 bayanApp/forms.py:96 bayanApp/models.py:47
+msgid "Federation Of Associations"
+msgstr ""
+
+#: bayanApp/forms.py:80 bayanApp/models.py:35
+msgid "Profile Picture"
+msgstr ""
+
+#: bayanApp/forms.py:111
+msgid "Please select location"
+msgstr ""
+
+#: bayanApp/forms.py:113 bayanApp/forms.py:146 bayanApp/models.py:129
+#: bayanApp/templates/list_all_orders.html:31
+#: bayanApp/templates/list_orders.html:20 bayanApp/templates/order_xo.html:32
+#: bayanApp/templates/print_order.html:102 bayanApp/views.py:277
+msgid "Opened"
+msgstr ""
+
+#: bayanApp/forms.py:113 bayanApp/forms.py:146 bayanApp/forms.py:148
+#: bayanApp/models.py:129 bayanApp/templates/print_order.html:105
+#: bayanApp/templates/sales_order.html:33 bayanApp/views.py:248
+msgid "Closed"
+msgstr ""
+
+#: bayanApp/forms.py:150
+msgid "Order Data"
+msgstr ""
+
+#: bayanApp/forms.py:150
+msgid "Please upload data File"
+msgstr ""
+
+#: bayanApp/forms.py:152
+msgid "Please select location from the list."
+msgstr ""
+
+#: bayanApp/forms.py:153
+msgid "Please select vendor from the list."
+msgstr ""
+
+#: bayanApp/models.py:24 bayanApp/models.py:57 bayanApp/models.py:76
+#: bayanApp/models.py:86 bayanApp/templates/list_all_orders.html:81
+#: bayanApp/templates/list_all_orders.html:101
+#: bayanApp/templates/list_bills.html:92 bayanApp/templates/list_bills.html:114
+#: bayanApp/templates/list_newUsers.html:82
+#: bayanApp/templates/list_newUsers.html:107
+#: bayanApp/templates/list_orders.html:67
+#: bayanApp/templates/list_products.html:54
+#: bayanApp/templates/list_transactions.html:73
+#: bayanApp/templates/list_transactions.html:105
+#: bayanApp/templates/list_vendors.html:177
+#: bayanApp/templates/list_vendors.html:282
+#: bayanApp/templates/list_vendors.html:306
+#: bayanApp/templates/print_order.html:24
+msgid "User"
+msgstr ""
+
+#: bayanApp/models.py:25
+msgid "Users"
+msgstr ""
+
+#: bayanApp/models.py:33 bayanApp/models.py:59 bayanApp/models.py:136
+msgid "VEND_DESC_ARABIC"
+msgstr ""
+
+#: bayanApp/models.py:34 bayanApp/models.py:58 bayanApp/models.py:99
+#: bayanApp/models.py:135 bayanApp/models.py:182 bayanApp/models.py:195
+#: bayanApp/models.py:210 bayanApp/templates/list_vendors.html:21
+#: bayanApp/templates/list_vendors.html:138
+msgid "VEND_CODE"
+msgstr ""
+
+#: bayanApp/models.py:60 bayanApp/models.py:208
+msgid "Chique_Image"
+msgstr ""
+
+#: bayanApp/models.py:65 bayanApp/templates/error_filetype.html:14
+#: bayanApp/templates/layout.html:104 bayanApp/templates/layout.html:119
+#: bayanApp/templates/list_vendors.html:22
+msgid "Vendors"
+msgstr ""
+
+#: bayanApp/models.py:77
+msgid "sales_code"
+msgstr ""
+
+#: bayanApp/models.py:79
+msgid "Sale"
+msgstr ""
+
+#: bayanApp/models.py:88
+msgid "accounts_code"
+msgstr ""
+
+#: bayanApp/models.py:90
+msgid "Account"
+msgstr ""
+
+#: bayanApp/models.py:100
+msgid "PACK_ID"
+msgstr ""
+
+#: bayanApp/models.py:101
+msgid "NO_OF_ITEMS"
+msgstr ""
+
+#: bayanApp/models.py:102
+msgid "ARABIC_NAME"
+msgstr ""
+
+#: bayanApp/models.py:103
+msgid "UNIT_DESC"
+msgstr ""
+
+#: bayanApp/models.py:104
+msgid "PURCH_PRICE"
+msgstr ""
+
+#: bayanApp/models.py:105
+msgid "SALE_PRICE"
+msgstr ""
+
+#: bayanApp/models.py:106
+msgid "BARCODE"
+msgstr ""
+
+#: bayanApp/models.py:108
+msgid "Product"
+msgstr ""
+
+#: bayanApp/models.py:109 bayanApp/templates/layout.html:96
+#: bayanApp/templates/list_vendors.html:25
+msgid "Products"
+msgstr ""
+
+#: bayanApp/models.py:117 bayanApp/models.py:138
+#: bayanApp/templates/list_all_orders.html:27
+#: bayanApp/templates/list_orders.html:30 bayanApp/templates/order_xo.html:39
+#: bayanApp/templates/print_order.html:54
+#: bayanApp/templates/sales_order.html:39
+msgid "Location"
+msgstr ""
+
+#: bayanApp/models.py:118
+msgid "Locations"
+msgstr ""
+
+#: bayanApp/models.py:120
+msgid "LOCN_ID"
+msgstr ""
+
+#: bayanApp/models.py:121
+msgid "LOCN_NAME"
+msgstr ""
+
+#: bayanApp/models.py:127
+msgid "Order"
+msgstr ""
+
+#: bayanApp/models.py:128 bayanApp/templates/layout.html:89
+#: bayanApp/templates/layout.html:111 bayanApp/templates/layout.html:114
+#: bayanApp/templates/list_vendors.html:24
+msgid "Orders"
+msgstr ""
+
+#: bayanApp/models.py:131
+msgid "Order_No"
+msgstr ""
+
+#: bayanApp/models.py:132
+msgid "Order_Date"
+msgstr ""
+
+#: bayanApp/models.py:133
+msgid "Order_State"
+msgstr ""
+
+#: bayanApp/models.py:134
+msgid "Order_Image"
+msgstr ""
+
+#: bayanApp/models.py:139 bayanApp/templates/order_xo.html:51
+#: bayanApp/templates/print_order.html:55
+#: bayanApp/templates/sales_order.html:50
+msgid "Notes"
+msgstr ""
+
+#: bayanApp/models.py:140
+msgid "table_data"
+msgstr ""
+
+#: bayanApp/models.py:141
+msgid "Order_data_Image"
+msgstr ""
+
+#: bayanApp/models.py:151
+msgid "Image"
+msgstr ""
+
+#: bayanApp/models.py:156
+#, python-format
+msgid "Quantity %(value)s is not allowed"
+msgstr ""
+
+#: bayanApp/models.py:159
+msgid "quantity"
+msgstr ""
+
+#: bayanApp/models.py:171
+msgid "Transaction"
+msgstr ""
+
+#: bayanApp/models.py:172
+msgid "Transactions"
+msgstr ""
+
+#: bayanApp/models.py:174
+msgid "read"
+msgstr ""
+
+#: bayanApp/models.py:174
+msgid "unread"
+msgstr ""
+
+#: bayanApp/models.py:175
+msgid "new order"
+msgstr ""
+
+#: bayanApp/models.py:175
+msgid "confirm order"
+msgstr ""
+
+#: bayanApp/models.py:175 bayanApp/templates/list_vendors.html:26
+msgid "update products"
+msgstr ""
+
+#: bayanApp/models.py:175
+msgid "upload chique"
+msgstr ""
+
+#: bayanApp/models.py:177
+msgid "T_No"
+msgstr ""
+
+#: bayanApp/models.py:178
+msgid "T_Date"
+msgstr ""
+
+#: bayanApp/models.py:179
+msgid "T_Type"
+msgstr ""
+
+#: bayanApp/models.py:180
+msgid "T_State"
+msgstr ""
+
+#: bayanApp/models.py:181
+msgid "T_Details"
+msgstr ""
+
+#: bayanApp/models.py:183
+msgid "Parameter"
+msgstr ""
+
+#: bayanApp/models.py:190 bayanApp/templates/list_vendors.html:28
+msgid "Bill"
+msgstr ""
+
+#: bayanApp/models.py:191
+msgid "Bills"
+msgstr ""
+
+#: bayanApp/models.py:193
+msgid "B_Date"
+msgstr ""
+
+#: bayanApp/models.py:194
+msgid "B_Details"
+msgstr ""
+
+#: bayanApp/models.py:197
+msgid "Bill_File"
+msgstr ""
+
+#: bayanApp/models.py:204
+msgid "Chique"
+msgstr ""
+
+#: bayanApp/models.py:205
+msgid "Chiques"
+msgstr ""
+
+#: bayanApp/models.py:207
+msgid "C_Date"
+msgstr ""
+
+#: bayanApp/templates/403.html:9
+msgid "don't have permission to access this page"
+msgstr ""
+
+#: bayanApp/templates/403.html:10 bayanApp/templates/404.html:10
+#: bayanApp/templates/error_filetype.html:11 bayanApp/templates/layout.html:81
+msgid "Home"
+msgstr ""
+
+#: bayanApp/templates/404.html:9
+msgid "this page not found"
+msgstr ""
+
+#: bayanApp/templates/change_password.html:18
+msgid "Changing Password"
+msgstr ""
+
+#: bayanApp/templates/change_password.html:22
+msgid "Your password cannot be identical to your other personal information"
+msgstr ""
+
+#: bayanApp/templates/change_password.html:23
+msgid "Your password should include at least 8 characters"
+msgstr ""
+
+#: bayanApp/templates/change_password.html:24
+msgid "Your password cannot be a commonly used password"
+msgstr ""
+
+#: bayanApp/templates/change_password.html:25
+msgid "Your password cannot be just numbers"
+msgstr ""
+
+#: bayanApp/templates/change_password.html:49 bayanApp/templates/home.html:71
+#: bayanApp/templates/list_newUsers.html:58
+#: bayanApp/templates/list_vendors.html:84
+#: bayanApp/templates/list_vendors.html:113
+#: bayanApp/templates/list_vendors.html:145
+#: bayanApp/templates/print_order.html:147
+#: bayanApp/templates/update_profile.html:133
+msgid "Submit"
+msgstr ""
+
+#: bayanApp/templates/chique_email.html:6
+msgid "we informed you that your Chique is Ready."
+msgstr ""
+
+#: bayanApp/templates/chique_email.html:7 bayanApp/templates/email.html:7
+msgid "and we send image of it in attachments"
+msgstr ""
+
+#: bayanApp/templates/email.html:6
+msgid "we informed you that you order no : "
+msgstr ""
+
+#: bayanApp/templates/email.html:6
+msgid "was confirmed"
+msgstr ""
+
+#: bayanApp/templates/error_filetype.html:10
+msgid "The uploaded file is not supported, please choose photo or excel file"
+msgstr ""
+
+#: bayanApp/templates/error_filetype.html:13
+msgid "The uploaded file not supported, please select image"
+msgstr ""
+
+#: bayanApp/templates/error_filetype.html:16 bayanApp/validators.py:45
+msgid "File type not supported. JPEG, PNG, or pdf recommended"
+msgstr ""
+
+#: bayanApp/templates/error_filetype.html:17
+msgid "List Order"
+msgstr ""
+
+#: bayanApp/templates/error_filetype.html:19 bayanApp/validators.py:56
+msgid "File type not supported. xlsx recommended"
+msgstr ""
+
+#: bayanApp/templates/error_filetype.html:20 bayanApp/templates/layout.html:107
+msgid "List Vendors"
+msgstr ""
+
+#: bayanApp/templates/home.html:11
+msgid "Last Transactions"
+msgstr ""
+
+#: bayanApp/templates/home.html:30
+msgid "There isn't unread transactions"
+msgstr ""
+
+#: bayanApp/templates/home.html:35
+msgid "Show All Transactions"
+msgstr ""
+
+#: bayanApp/templates/home.html:49 bayanApp/templates/home.html:61
+msgid "Upload Bill"
+msgstr ""
+
+#: bayanApp/templates/home.html:72 bayanApp/templates/list_newUsers.html:59
+#: bayanApp/templates/list_vendors.html:85
+#: bayanApp/templates/list_vendors.html:114
+#: bayanApp/templates/list_vendors.html:146
+#: bayanApp/templates/print_order.html:172
+#: bayanApp/templates/update_profile.html:134
+msgid "Cancel"
+msgstr ""
+
+#: bayanApp/templates/home.html:76 bayanApp/templates/list_vendors.html:88
+#: bayanApp/templates/list_vendors.html:117
+#: bayanApp/templates/list_vendors.html:150
+msgid "Loading"
+msgstr ""
+
+#: bayanApp/templates/layout.html:8
+msgid "Bayan Co. WebSite"
+msgstr ""
+
+#: bayanApp/templates/layout.html:71 bayanApp/templates/list_vendors.html:13
+#: bayanApp/views_deploy.py:72
+msgid "Financial"
+msgstr ""
+
+#: bayanApp/templates/layout.html:73
+msgid "Bayan COOP Society"
+msgstr ""
+
+#: bayanApp/templates/layout.html:84
+msgid "Profile"
+msgstr ""
+
+#: bayanApp/templates/layout.html:91 bayanApp/templates/layout.html:113
+msgid "New Order"
+msgstr ""
+
+#: bayanApp/templates/layout.html:92
+msgid "List Orders"
+msgstr ""
+
+#: bayanApp/templates/layout.html:98
+msgid "List Products"
+msgstr ""
+
+#: bayanApp/templates/layout.html:106 bayanApp/templates/list_newUsers.html:17
+msgid "New Users"
+msgstr ""
+
+#: bayanApp/templates/layout.html:125
+msgid "Welcome"
+msgstr ""
+
+#: bayanApp/templates/layout.html:129
+msgid "Logout"
+msgstr ""
+
+#: bayanApp/templates/layout.html:131 bayanApp/templates/reset_password.html:42
+#: bayanApp/templates/signup.html:179
+msgid "Login"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:22
+#: bayanApp/templates/list_orders.html:26
+msgid "Order ID"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:23
+#: bayanApp/templates/list_orders.html:27 bayanApp/templates/order_xo.html:23
+#: bayanApp/templates/print_order.html:38
+#: bayanApp/templates/print_order.html:137
+#: bayanApp/templates/sales_order.html:24
+msgid "Order No"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:25
+#: bayanApp/templates/list_orders.html:28 bayanApp/templates/order_xo.html:27
+#: bayanApp/templates/print_order.html:39
+#: bayanApp/templates/sales_order.html:28
+msgid "Order Date"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:26
+#: bayanApp/templates/list_orders.html:29 bayanApp/templates/order_xo.html:31
+#: bayanApp/templates/print_order.html:40
+#: bayanApp/templates/sales_order.html:32
+msgid "Order State"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:57
+msgid "Delete Orders that are older than selected date"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:59
+#: bayanApp/templates/list_orders.html:52 bayanApp/templates/order_xo.html:75
+#: bayanApp/templates/order_xo.html:104 bayanApp/templates/sales_order.html:181
+msgid "Remove"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:76
+#: bayanApp/templates/list_bills.html:86
+#: bayanApp/templates/list_newUsers.html:76
+#: bayanApp/templates/list_orders.html:76
+#: bayanApp/templates/list_products.html:63
+#: bayanApp/templates/list_transactions.html:68
+#: bayanApp/templates/list_vendors.html:186
+#: bayanApp/templates/list_vendors.html:276
+msgid "Print Selected Columns"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:78
+#: bayanApp/templates/list_all_orders.html:97
+#: bayanApp/templates/list_bills.html:89 bayanApp/templates/list_bills.html:111
+#: bayanApp/templates/list_newUsers.html:78
+#: bayanApp/templates/list_newUsers.html:103
+#: bayanApp/templates/list_orders.html:75
+#: bayanApp/templates/list_products.html:62
+#: bayanApp/templates/list_transactions.html:67
+#: bayanApp/templates/list_transactions.html:71
+#: bayanApp/templates/list_transactions.html:102
+#: bayanApp/templates/list_vendors.html:185
+#: bayanApp/templates/list_vendors.html:278
+#: bayanApp/templates/list_vendors.html:303
+msgid "Bayan Co-operative Society"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:82
+#: bayanApp/templates/list_all_orders.html:102
+#: bayanApp/templates/list_bills.html:93 bayanApp/templates/list_bills.html:115
+#: bayanApp/templates/list_newUsers.html:83
+#: bayanApp/templates/list_newUsers.html:108
+#: bayanApp/templates/list_orders.html:68
+#: bayanApp/templates/list_products.html:55
+#: bayanApp/templates/list_transactions.html:74
+#: bayanApp/templates/list_transactions.html:106
+#: bayanApp/templates/list_vendors.html:178
+#: bayanApp/templates/list_vendors.html:283
+#: bayanApp/templates/list_vendors.html:307
+#: bayanApp/templates/print_order.html:25
+msgid "Date of Day"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:84
+#: bayanApp/templates/list_all_orders.html:104
+msgid "All Orders List"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:95
+#: bayanApp/templates/list_newUsers.html:102
+#: bayanApp/templates/list_orders.html:77
+#: bayanApp/templates/list_products.html:64
+#: bayanApp/templates/list_transactions.html:113
+#: bayanApp/templates/list_vendors.html:187
+#: bayanApp/templates/list_vendors.html:302
+msgid "Print Selected Rows"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:116
+#: bayanApp/templates/list_bills.html:124
+#: bayanApp/templates/list_newUsers.html:115
+#: bayanApp/templates/list_orders.html:78
+#: bayanApp/templates/list_products.html:65
+#: bayanApp/templates/list_transactions.html:125
+#: bayanApp/templates/list_vendors.html:188
+#: bayanApp/templates/list_vendors.html:321
+msgid "Select Columns"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:120
+#: bayanApp/templates/list_bills.html:128
+#: bayanApp/templates/list_newUsers.html:119
+#: bayanApp/templates/list_orders.html:81
+#: bayanApp/templates/list_products.html:68
+#: bayanApp/templates/list_transactions.html:129
+#: bayanApp/templates/list_vendors.html:191
+#: bayanApp/templates/list_vendors.html:325
+msgid "Search"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:121
+#: bayanApp/templates/list_bills.html:129
+#: bayanApp/templates/list_newUsers.html:120
+#: bayanApp/templates/list_transactions.html:130
+#: bayanApp/templates/list_vendors.html:326
+msgid "No data available in table"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:123
+#: bayanApp/templates/list_bills.html:131
+#: bayanApp/templates/list_newUsers.html:122
+#: bayanApp/templates/list_orders.html:80
+#: bayanApp/templates/list_products.html:67
+#: bayanApp/templates/list_transactions.html:132
+#: bayanApp/templates/list_vendors.html:190
+#: bayanApp/templates/list_vendors.html:328
+msgid "Previous"
+msgstr ""
+
+#: bayanApp/templates/list_all_orders.html:124
+#: bayanApp/templates/list_bills.html:132
+#: bayanApp/templates/list_newUsers.html:123
+#: bayanApp/templates/list_orders.html:79
+#: bayanApp/templates/list_products.html:66
+#: bayanApp/templates/list_transactions.html:133
+#: bayanApp/templates/list_vendors.html:189
+#: bayanApp/templates/list_vendors.html:329
+msgid "Next"
+msgstr ""
+
+#: bayanApp/templates/list_bills.html:25
+#: bayanApp/templates/list_products.html:24
+msgid "ID"
+msgstr ""
+
+#: bayanApp/templates/list_bills.html:26
+msgid "Bills Date"
+msgstr ""
+
+#: bayanApp/templates/list_bills.html:27
+msgid "Bills File"
+msgstr ""
+
+#: bayanApp/templates/list_bills.html:36
+#: bayanApp/templates/list_newUser_info.html:59
+#: bayanApp/templates/list_newUser_info.html:71
+#: bayanApp/templates/list_newUser_info.html:82
+#: bayanApp/templates/list_newUser_info.html:96
+#: bayanApp/templates/list_newUser_info.html:109
+#: bayanApp/templates/list_newUser_info.html:122
+#: bayanApp/templates/list_newUser_info.html:135
+#: bayanApp/templates/list_newUser_info.html:148
+#: bayanApp/templates/list_newUser_info.html:159
+#: bayanApp/templates/list_newUser_info.html:171
+#: bayanApp/templates/list_newUser_info.html:183
+#: bayanApp/templates/list_vendor_info.html:61
+#: bayanApp/templates/list_vendor_info.html:72
+#: bayanApp/templates/list_vendor_info.html:83
+#: bayanApp/templates/list_vendor_info.html:97
+#: bayanApp/templates/list_vendor_info.html:110
+#: bayanApp/templates/list_vendor_info.html:123
+#: bayanApp/templates/list_vendor_info.html:136
+#: bayanApp/templates/list_vendor_info.html:149
+#: bayanApp/templates/list_vendor_info.html:163
+#: bayanApp/templates/list_vendor_info.html:174
+#: bayanApp/templates/list_vendor_info.html:185
+#: bayanApp/templates/profile.html:61 bayanApp/templates/profile.html:73
+#: bayanApp/templates/profile.html:85 bayanApp/templates/profile.html:96
+#: bayanApp/templates/profile.html:107 bayanApp/templates/profile.html:118
+#: bayanApp/templates/profile.html:128 bayanApp/templates/profile.html:137
+#: bayanApp/templates/profile.html:147 bayanApp/templates/profile.html:156
+#: bayanApp/templates/profile.html:165
+msgid "show"
+msgstr ""
+
+#: bayanApp/templates/list_bills.html:95 bayanApp/templates/list_bills.html:117
+msgid "All Bills List"
+msgstr ""
+
+#: bayanApp/templates/list_bills.html:108
+msgid "Print Selected rows"
+msgstr ""
+
+#: bayanApp/templates/list_newUser_info.html:27
+#: bayanApp/templates/list_vendor_info.html:29
+#: bayanApp/templates/profile.html:20
+msgid "Full Name"
+msgstr ""
+
+#: bayanApp/templates/list_newUser_info.html:62
+#: bayanApp/templates/list_newUser_info.html:74
+#: bayanApp/templates/list_newUser_info.html:86
+#: bayanApp/templates/list_newUser_info.html:99
+#: bayanApp/templates/list_newUser_info.html:112
+#: bayanApp/templates/list_newUser_info.html:125
+#: bayanApp/templates/list_newUser_info.html:138
+#: bayanApp/templates/list_newUser_info.html:151
+#: bayanApp/templates/list_newUser_info.html:163
+#: bayanApp/templates/list_newUser_info.html:174
+#: bayanApp/templates/list_newUser_info.html:186
+#: bayanApp/templates/list_newUser_info.html:192
+#: bayanApp/templates/list_vendor_info.html:64
+#: bayanApp/templates/list_vendor_info.html:75
+#: bayanApp/templates/list_vendor_info.html:87
+#: bayanApp/templates/list_vendor_info.html:100
+#: bayanApp/templates/list_vendor_info.html:113
+#: bayanApp/templates/list_vendor_info.html:126
+#: bayanApp/templates/list_vendor_info.html:139
+#: bayanApp/templates/list_vendor_info.html:152
+#: bayanApp/templates/list_vendor_info.html:166
+#: bayanApp/templates/list_vendor_info.html:177
+#: bayanApp/templates/list_vendor_info.html:188
+#: bayanApp/templates/print_order.html:171
+msgid "Print"
+msgstr ""
+
+#: bayanApp/templates/list_newUser_info.html:156
+#: bayanApp/templates/list_vendor_info.html:159
+#: bayanApp/templates/profile.html:142
+msgid "Federation of Associations"
+msgstr ""
+
+#: bayanApp/templates/list_newUsers.html:16 bayanApp/templates/order_xo.html:67
+#: bayanApp/templates/print_order.html:70
+msgid "Serial"
+msgstr ""
+
+#: bayanApp/templates/list_newUsers.html:40
+#: bayanApp/templates/list_vendors.html:72
+msgid "Upload Products List"
+msgstr ""
+
+#: bayanApp/templates/list_newUsers.html:50
+#: bayanApp/templates/list_vendors.html:78
+msgid "Vendor Code"
+msgstr ""
+
+#: bayanApp/templates/list_newUsers.html:85
+#: bayanApp/templates/list_newUsers.html:110
+msgid "New Users List"
+msgstr ""
+
+#: bayanApp/templates/list_orders.html:32
+msgid "Delete"
+msgstr ""
+
+#: bayanApp/templates/list_orders.html:70
+#: bayanApp/templates/list_products.html:57
+#: bayanApp/templates/list_transactions.html:76
+#: bayanApp/templates/list_transactions.html:108
+#: bayanApp/templates/list_vendors.html:180
+msgid "Vendor Orders Report"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:25
+msgid "Name"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:26
+msgid "pack id"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:27
+msgid "no of items"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:28
+msgid "unit desc"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:29
+msgid "purch price"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:30
+msgid "sale price"
+msgstr ""
+
+#: bayanApp/templates/list_products.html:31
+msgid "barcode"
+msgstr ""
+
+#: bayanApp/templates/list_transactions.html:28
+msgid "Transaction No"
+msgstr ""
+
+#: bayanApp/templates/list_transactions.html:29
+msgid "Transaction Date"
+msgstr ""
+
+#: bayanApp/templates/list_transactions.html:30
+msgid "Transaction Type"
+msgstr ""
+
+#: bayanApp/templates/list_transactions.html:31
+msgid "Transaction Details"
+msgstr ""
+
+#: bayanApp/templates/list_transactions.html:32
+msgid "Transaction state"
+msgstr ""
+
+#: bayanApp/templates/list_vendors.html:16
+msgid "Upload All Products"
+msgstr ""
+
+#: bayanApp/templates/list_vendors.html:29
+#: bayanApp/templates/list_vendors.html:132
+msgid "Upload Chique"
+msgstr ""
+
+#: bayanApp/templates/list_vendors.html:44
+#: bayanApp/templates/list_vendors.html:47
+#: bayanApp/templates/list_vendors.html:54
+msgid "List"
+msgstr ""
+
+#: bayanApp/templates/list_vendors.html:50
+#: bayanApp/templates/list_vendors.html:57
+msgid "Upload"
+msgstr ""
+
+#: bayanApp/templates/list_vendors.html:103
+msgid "Upload products Sheet"
+msgstr ""
+
+#: bayanApp/templates/list_vendors.html:285
+#: bayanApp/templates/list_vendors.html:309
+msgid "Vendors List"
+msgstr ""
+
+#: bayanApp/templates/login.html:33
+msgid "Password"
+msgstr ""
+
+#: bayanApp/templates/login.html:37
+msgid "Log in"
+msgstr ""
+
+#: bayanApp/templates/login.html:40
+msgid "Don't have account ?"
+msgstr ""
+
+#: bayanApp/templates/login.html:42
+msgid "Signup"
+msgstr ""
+
+#: bayanApp/templates/login.html:47 bayanApp/templates/reset_password.html:29
+#: bayanApp/templates/reset_password.html:38
+msgid "Reset Password"
+msgstr ""
+
+#: bayanApp/templates/login.html:67 bayanApp/templates/reset_password.html:62
+#: bayanApp/templates/reset_password_sent.html:41
+msgid "All rights reserved to Al-Ibrahim Gulf Company"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:57 bayanApp/templates/print_order.html:64
+#: bayanApp/templates/sales_order.html:54
+msgid "Items Informations"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:68 bayanApp/templates/print_order.html:71
+msgid "Item"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:69 bayanApp/templates/print_order.html:72
+msgid "Code"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:70
+msgid "Desc"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:71 bayanApp/templates/print_order.html:74
+msgid "Count"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:72 bayanApp/templates/print_order.html:75
+msgid "Quantity"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:73 bayanApp/templates/print_order.html:76
+msgid "Price"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:74 bayanApp/templates/print_order.html:77
+msgid "Total"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:82 bayanApp/templates/sales_order.html:163
+msgid "Please Select Item"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:90 bayanApp/templates/sales_order.html:169
+msgid "Please select a valid Item."
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:99
+msgid "Please Enter Quantity"
+msgstr ""
+
+#: bayanApp/templates/order_xo.html:110 bayanApp/templates/sales_order.html:64
+msgid "Save"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:16
+msgid "Purchase Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:73
+msgid "Description"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:101
+msgid "Print Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:109
+msgid "Delete Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:113
+msgid "Upload Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:117
+#: bayanApp/templates/print_order.html:267
+msgid "Show Confirmed Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:127
+msgid "Upload Confirmed Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:148
+msgid "Close"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:164
+msgid "Confirmed Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:271
+msgid "Hide Confirmed Order"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:280
+msgid "Show Chique"
+msgstr ""
+
+#: bayanApp/templates/print_order.html:284
+msgid "Hide Chique"
+msgstr ""
+
+#: bayanApp/templates/profile.html:52 bayanApp/templates/update_profile.html:71
+msgid "Required Papers"
+msgstr ""
+
+#: bayanApp/templates/profile.html:172
+msgid "Edit"
+msgstr ""
+
+#: bayanApp/templates/profile.html:174
+msgid "Change Password"
+msgstr ""
+
+#: bayanApp/templates/reset_password.html:30
+msgid ""
+"Have you lost your password? Enter your email address below and we will send "
+"you instructions for obtaining a new password."
+msgstr ""
+
+#: bayanApp/templates/reset_password_sent.html:27
+msgid "Password reset has been sent"
+msgstr ""
+
+#: bayanApp/templates/reset_password_sent.html:28
+msgid ""
+"An email has been sent with instructions to set your password, in case an "
+"account exists with the same email you entered. You will receive e-mail soon"
+msgstr ""
+
+#: bayanApp/templates/reset_password_sent.html:29
+msgid ""
+"In case the e-mail is not received, please ensure that your e-mail address "
+"is entered correctly and review the spam folder."
+msgstr ""
+
+#: bayanApp/templates/signup.html:28
+msgid "Bayan Co. Signup"
+msgstr ""
+
+#: bayanApp/templates/signup.html:101
+msgid "Papers Needed to complete Registration"
+msgstr ""
+
+#: bayanApp/templates/signup.html:179
+msgid "Already have account ?"
+msgstr ""
+
+#: bayanApp/templates/signup.html:184
+msgid "Sign Up"
+msgstr ""
+
+#: bayanApp/validators.py:35
+msgid "File type not supported. JPEG, PNG recommended"
+msgstr ""
+
+#: bayanApp/views.py:43 bayanApp/views.py:139 bayanApp/views.py:207
+#: bayanApp/views.py:222 bayanApp/views.py:273 bayanApp/views.py:349
+#: bayanApp/views.py:368 bayanApp/views.py:457 bayanApp/views.py:482
+#: bayanApp/views_deploy.py:28
+msgid "vendors"
+msgstr ""
+
+#: bayanApp/views.py:68
+msgid "User is not active"
+msgstr ""
+
+#: bayanApp/views.py:70
+msgid "Username OR Password is incorrect"
+msgstr ""
+
+#: bayanApp/views.py:72 bayanApp/views.py:466
+msgid "Account does not exist"
+msgstr ""
+
+#: bayanApp/views.py:174 bayanApp/views.py:199 bayanApp/views.py:207
+#: bayanApp/views.py:222 bayanApp/views.py:238 bayanApp/views.py:285
+#: bayanApp/views.py:294 bayanApp/views.py:300 bayanApp/views.py:309
+#: bayanApp/views.py:316 bayanApp/views.py:368 bayanApp/views.py:384
+#: bayanApp/views.py:419 bayanApp/views_deploy.py:29
+msgid "sales"
+msgstr ""
+
+#: bayanApp/views.py:294 bayanApp/views.py:309 bayanApp/views.py:323
+#: bayanApp/views.py:489 bayanApp/views_deploy.py:30
+msgid "financials"
+msgstr ""
+
+#: bayanApp/views_deploy.py:27 bayanApp/views_deploy.py:45
+msgid "admins"
+msgstr ""
+
+#: bayanApp/views_deploy.py:31
+msgid "users"
+msgstr ""

@@ -1,0 +1,11 @@
+{% load i18n %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style-error.css' %}">
+
+<section id="error-page">
+<div class="error-img">
+    <img src="/static/accounts/img/err403.png" alt="">
+</div>
+<p>{% trans "don't have permission to access this page" %}</p>
+<a class="nav-link" href="{% url 'home' %}">{% trans "Home"   %}</a>
+</section>

@@ -1,0 +1,15 @@
+<br>
+<div style="float: left;margin-right:10px">
+<table style="width:100% ">
+<tr>
+	<th>LOCN_ID</th>
+	<th>LOCN_NAME</th>
+</tr>
+{% for l in locs %}
+<tr>
+	<td> {{ l.LOCN_ID }}</td>
+	<td> {{ l.LOCN_NAME }} </td>
+</tr>
+{% endfor %}
+</table>
+</div>

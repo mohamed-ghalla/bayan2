@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" media='all'>
+
+<section id="ibr-list-products" class="page-wrapper page-logo-header">
+  <!--<div class="card-transparent" >     -->
+  <!-- <div class="card-header">  -->
+  <div class="top-sec d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+    <div class="logo-wrapper mb-0 ml-3">
+      <img class="logo-pic float-right" src="{% static 'img/logo.jpg' %}">
+    </div>
+    <div class="text-center text-md-right">
+      <h2>{{ vendor.VEND_DESC_ARABIC }}</h2>
+    </div>
+  </div>
+
+  <!-- <div  class="content table-responsive" id="table-div" style="display:block">  -->
+  <div class="table-wrapper">
+    <table id="products_table" class="table table-striped table-bordered table-sm ">
+      <thead>
+        <tr class='text-center'>
+          <th>{%trans "ID" %}</th>
+          <th>{%trans "Name" %}</th>
+          <th>{%trans "pack id" %}</th>
+          <th>{%trans "no of items" %}</th>
+          <th>{%trans "unit desc" %}</th>
+          <th>{%trans "purch price" %}</th>
+          <th>{%trans "sale price" %}</th>
+          <th>{%trans "barcode" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in items %}
+        <tr class="m-0 p-0">
+          <td class="m-0">{{i.ID}}</td>
+          <td>{{i.ARABIC_NAME }} </td>
+          <td>{{i.PACK_ID}} </td>
+          <td>{{i.NO_OF_ITEMS }} </td>
+          <td>{{i.UNIT_DESC}}</td>
+          <td>{{i.PURCH_PRICE|floatformat:3}}</td>
+          <td>{{i.SALE_PRICE|floatformat:3}}</td>
+          <td>{{i.BARCODE}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<div id="print_page">
+  <div id="print_header" >
+	  <img src="https://bayancoopq8.com/static/img/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+	  <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+	  <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+	  <div class="d-flex justify-content-center align-items-end">
+	    <h4>{% trans "Vendor Orders Report" %}</h4>
+	  </div>
+	  <hr style="width:80%;margin-center:0">
+	  <h4><p class="text-center">{{vendor.VEND_DESC_ARABIC}}</p></h4>`,
+  </div>
+  <div id="title_id"><p class="text-center">{% trans "Bayan Co-operative Society" %}</p></div>
+  <div id="print_columns">{% trans "Print Selected Columns" %}</div>
+  <div id="print_rows">{% trans "Print Selected Rows" %}</div>
+  <div id="select_columns">{% trans "Select Columns" %}</div>
+  <div id="next">{% trans "Next" %}</div>
+  <div id="previous">{% trans "Previous" %}</div>
+  <div id="search">{% trans "Search" %}</div>
+</div>
+
+<script src="{% static 'js/print_products.js' %}"></script>
+
+
+{% endblock %}

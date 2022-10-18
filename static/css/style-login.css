@@ -1,0 +1,135 @@
+/*
+@import url("fontcss2.css");
+@import url("fontcss3.css");
+*/
+:root {
+  --gray: #6c757d;
+  --orange: #de6b48;
+  --yellow: #ffc857;
+  --blueLight: #98dfea;
+  --blue: #013b83;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  direction: rtl;
+  text-align: right;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  background-attachment: fixed;
+  background-position: left center;
+  background-color: #e5e5e5;
+  overflow-x: hidden;
+  font-family: "Markazi Text", sans-serif;
+}
+
+.loginbox {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginbox p a i {
+  width: 16px;
+  text-align: center;
+}
+
+.loginbox .logo-wrapper {
+  width: 100%;
+  min-width: 300px;
+}
+
+.loginbox img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 200px;
+}
+
+.loginbox .card-body {
+  width: 100%;
+  max-width: fit-content;
+  min-width: 300px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border-bottom: 3px solid #ccc;
+}
+
+.loginbox label,
+.loginbox .btn {
+  font-family: "Cairo", sans-serif;
+}
+
+#footer {
+  background: #6c757d;
+  color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .loginbox .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .loginbox .logo-wrapper,
+  .loginbox .card-body {
+    min-width: 100%;
+  }
+}
+
+/* -------------------------------------------------
+  Page :: Reset Password
+------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.btn-primary {
+  background: var(--blue);
+  border-color: transparent;
+}
+
+.ibr-reset-password h4:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin: 13px auto 0;
+  background: #ccc;
+}
+
+.ibr-reset-password p {
+  max-width: 260px;
+}
+
+.ibr-reset-password label {
+  display: none;
+}
+ 
+.ibr-reset-password input {
+  border: 1px solid #ccc;
+  border-radius: .25rem;
+  padding: 0 10px;
+  height: 36px;
+  width: 100%;
+}
