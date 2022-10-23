@@ -74,7 +74,8 @@ document.addEventListener('click',(e) =>
 		 });
 	 }
 });	
-  $("#bill_form").on('submit', function (e) {
+
+$("#bill_form").on('submit', function (e) {
     $("#chique_spinner").show();
     $("#chique_submit_btn").hide();
     $("#chique_cancel_btn").hide();

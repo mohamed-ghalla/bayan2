@@ -17,7 +17,7 @@ from .forms import SignUpForm, CustomerForm, OrderForm
 from .decorators import *
 from datetime import datetime
 from .models import *
-import pandas as pd
+#import pandas as pd
 import xlrd, os
 from django.utils.translation import gettext_lazy as _
 

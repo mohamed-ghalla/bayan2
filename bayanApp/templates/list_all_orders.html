@@ -81,70 +81,70 @@
 <script src="{% static 'js/remove.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/print_orders.js' %}" type="text/javascript"></script>
 <script>
-  $(document).ready(function () {
-    //  $('.dataTables_length').addClass('bs-select');
-    var table = $('#orders_table').DataTable({
-      responsive: true,
-      dom: 'Bfrtip',
-      buttons: [{
-        text: `{% trans 'Print Selected Columns' %}`,
-        extend: 'print',
-        title:`<p class="text-center pl-5">{% trans "Bayan Co-operative Society" %}</p>`,
-        messageTop:`
-	  <img src="https://bayancoopq8.com/static/images/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
-          <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
-          <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
-          <div class="d-flex justify-content-center align-items-end">
-             <h4>{% trans "All Orders List" %}</h4>
-          </div>`,	      
-        exportOptions: {
-          columns: ':visible',
-          modifier: {
-            selected: null
-          }
-        }
-      },
-        'colvis',
-      {
-        text: `{% trans 'Print Selected Rows' %}`,
-        extend: 'print',
-        title:`<p class="text-center ">{% trans "Bayan Co-operative Society" %}</p>`,
-
-        messageTop:`
-  	  <img src="https://bayancoopq8.com/static/images/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
-          <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
-          <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
-          <div class="d-flex justify-content-center align-items-end">
-            <h4>{% trans "All Orders List" %}</h4>
-          </div>`,	      
-        exportOptions: {
-          columns: ':visible',
-          columns: [ 0, 1, 2, 3, 4, 5],
-          modifier: {
+//  $(document).ready(function () {
+//    //  $('.dataTables_length').addClass('bs-select');
+//    var table = $('#orders_table').DataTable({
+//      responsive: true,
+//      dom: 'Bfrtip',
+//      buttons: [{
+//        text: `{% trans 'Print Selected Columns' %}`,
+//        extend: 'print',
+//        title:`<p class="text-center pl-5">{% trans "Bayan Co-operative Society" %}</p>`,
+//        messageTop:`
+//	  <img src="https://bayancoopq8.com/static/images/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+//          <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+//          <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+//          <div class="d-flex justify-content-center align-items-end">
+//             <h4>{% trans "All Orders List" %}</h4>
+//          </div>`,	      
+//        exportOptions: {
+//          columns: ':visible',
+//          modifier: {
 //            selected: null
-          }
-        }	      
-      }],
-      language: {
-        buttons: {
-          colvis: `{% trans 'Select Columns' %}`
-        }
-      },
-      "oLanguage": {
-        "sSearch": `{% trans 'Search' %}`,
-	"sEmptyTable":`{% trans 'No data available in table' %}`,
-        "oPaginate": {
-          "sPrevious": `{% trans 'Previous' %}`, // This is the link to the previous page
-          "sNext": `{% trans 'Next' %}`, // This is the link to the next page
-        }
-      },
-      select: true,
-      columnDefs: [{
-//        targets: -1,
-        visible: false
-      }]
-    }); new $.fn.dataTable.FixedHeader(table);
-  });
+//          }
+//        }
+//      },
+//        'colvis',
+//      {
+//        text: `{% trans 'Print Selected Rows' %}`,
+//        extend: 'print',
+//        title:`<p class="text-center ">{% trans "Bayan Co-operative Society" %}</p>`,
+
+//        messageTop:`
+//  	  <img src="https://bayancoopq8.com/static/images/logo.jpg"  class="float-right pr-3" width="100" height="100"/>
+//          <p class="text-left pl-3">{% trans "User" %}:{{request.user}}</p>
+//          <p class="text-left pl-3">{% trans "Date of Day" %}:{{mydate}}</p>
+//          <div class="d-flex justify-content-center align-items-end">
+//            <h4>{% trans "All Orders List" %}</h4>
+//          </div>`,	      
+//        exportOptions: {
+//          columns: ':visible',
+//          columns: [ 0, 1, 2, 3, 4, 5],
+//          modifier: {
+////            selected: null
+//          }
+//        }	      
+//      }],
+//      language: {
+//        buttons: {
+//          colvis: `{% trans 'Select Columns' %}`
+//        }
+//      },
+//      "oLanguage": {
+//        "sSearch": `{% trans 'Search' %}`,
+//	"sEmptyTable":`{% trans 'No data available in table' %}`,
+//        "oPaginate": {
+//          "sPrevious": `{% trans 'Previous' %}`, // This is the link to the previous page
+//          "sNext": `{% trans 'Next' %}`, // This is the link to the next page
+//        }
+//      },
+//      select: true,
+//      columnDefs: [{
+////        targets: -1,
+//        visible: false
+//      }]
+//    }); new $.fn.dataTable.FixedHeader(table);
+//  });
 </script>
 <script>
   var removeFunc = function (element) {

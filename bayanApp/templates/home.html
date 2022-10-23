@@ -14,11 +14,11 @@
           {% for t in un_transactions %}
             {% if t.t_type == "new order" or t.t_type == "confirm order" %}
               <li class="dropdown-item" >
-  	        <a href="{% url 'print_order' order_no=t.parameter %}" class="text-info" onclick="readTransaction({{t.t_no}})">{% trans t.t_type %}</a>
+		      <a href="{% url 'print_order' order_no=t.parameter %}" class="text-info" id="transaction_{{t.t_no}}">{% trans t.t_type %}</a>
 	      </li>
             {% elif t.t_type == "update products" %}
               <li class="dropdown-item" >
-	        <a href="{% url 'list_products' VEND_CODE=t.parameter %}" class="text-info" onclick="readTransaction({{t.t_no}})">{% trans t.t_type %}</a>
+	        <a href="{% url 'list_products' VEND_CODE=t.parameter %}" class="text-info" id="transaction_{{t.t_no}}">{% trans t.t_type %}</a>
 	      </li>
             {% elif t.t_type == "upload chique" %}
               <li class="dropdown-item" >
@@ -82,23 +82,6 @@
   </div>
 </div>
 <!-- #################################### end modal ############################## -->
-<script src="{% static 'js/upload.js' %}"></script>
-
-<script>
-  $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();
-  });
-</script>
-
-<script>
-  var readTransaction = function(no){
-    $.ajax({
-      type: 'GET',
-	    url: `/read_transaction/${no}`,
-      data: {},
-      success: function (response) {
-      },
-    });
-  };
-</script>
+<script src="{% static 'js/upload.js' %}" language="JavaScript" type="text/javascript"></script>
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}

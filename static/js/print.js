@@ -4,7 +4,6 @@ document.addEventListener('click',(e) =>
 	name = $(document.getElementById(id)).attr('url');
 	var path = window.location.origin+name ;
 	if(id.split("_")[0] == "print"){
-		alert("print");
 		if (name.endsWith('.pdf')) {
 			pdf = window.open(path);
 			pdf.print();

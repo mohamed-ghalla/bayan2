@@ -3,7 +3,6 @@ document.addEventListener('click',(e) =>
         id = e.target.id.split("_");
         if ( id[0] == "remove" && id[1] == "order"){
 		url = "/delete_order/"+id[2]+"/";
-		alert(url);
 		$.ajax({
 			type: "POST",
 			url: url,

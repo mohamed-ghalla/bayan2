@@ -55,9 +55,11 @@
     </div>
     <!-- Editable table -->
     <h4 class="card-header text-center text-uppercase py-2">{% trans "Items Informations" %}
-      <span class="table-add float-right mb-2">
+<!--
+	<span class="table-add float-right mb-2">
         <a href="#!" class="text-success"><i class="fa fa-plus fa-1x" aria-hidden="true" ></i></a>
       </span>
+-->
     </h4>
     <div class="">
       <div class="table-wrapper table-responsive">
@@ -72,7 +74,7 @@
       	      <th >{% trans "Quantity" %}</th>
       	      <th >{% trans "Price" %}</th>
       	      <th >{% trans "Total" %}</th>
-      	      <th >{% trans "Remove" %}</th>
+	      <!--      	      <th >{% trans "Remove" %}</th>   -->
             </tr>
             <!-- This is our clonable table line -->
             <tr class="" >
@@ -100,9 +102,11 @@
 	            </td>
               <td class="col_td" contenteditable="false" id="price_1">  </td>
 	            <td class="col_td" contenteditable="false" id="total_1" required></td>
-              <td class="col_td" id="remove_td">
+<!--
+	<td class="col_td" id="remove_td">
 	              <a type="button" class="button_remove btn btn-danger btn-rounded btn-sm my-0">{% trans "Remove" %}</a>
               </td>
+-->	    
             </tr>
           </table>
         </div>

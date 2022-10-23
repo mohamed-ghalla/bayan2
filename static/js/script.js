@@ -2,6 +2,9 @@ document.addEventListener('change',(e) =>
 {
   id = e.target.id;
   s = e.target.id.split("_");
+	select_item(s);
+});
+function select_item(s){
   if ( s[0] == "select" && s[1] == "item"){
     var str = $("#"+id+" option:selected").val();
     var res = str.split("-");
@@ -19,8 +22,7 @@ document.addEventListener('change',(e) =>
 	var y = x[1];
 	$('#total_'+y).text((Number($('#price_'+y).text()) * Number($('#quantity_'+y).val())).toPrecision(4));
   }
-
-});
+}
 
 //  ################ ################  ################  ################  ################  
 $('.button_remove').click(removeFunc);
