@@ -8,7 +8,7 @@ function select_item(s){
   if ( s[0] == "select" && s[1] == "item"){
     var str = $("#"+id+" option:selected").val();
     var res = str.split("-");
-    var x = res[4];
+    var x = s[2];
     $(`#code_${x}`).text(res[0]);
     $(`#desc_${x}`).text(res[1]);
     $(`#no_item_${x}`).text(res[2]);
@@ -16,8 +16,9 @@ function select_item(s){
     $(`#total_${x}`).text((Number($('#price_'+x).text()) * Number($('#quantity_'+x).val())).toPrecision(4));
   }
   else if(s[0] == "quantity"){
-	$("#quan_1").val($("#quantity_1").val());
-	var str = $("#quantity_1").attr('id');
+	$(`#quan_${s[1]}`).val($(`#quantity_${s[1]}`).val());
+	var str = $(`#quantity_${s[1]}`).attr('id');
+	  alert(str);
 	var x = str.split("_");
 	var y = x[1];
 	$('#total_'+y).text((Number($('#price_'+y).text()) * Number($('#quantity_'+y).val())).toPrecision(4));
@@ -72,7 +73,7 @@ $(document).ready(function() {
 ////    placeholder: '',
 //    allowClear: true,
 //  });
-//  $('.mdb-select').material_select();
+//  $('.mdb-select').materialSelect();
 //	alert("ready");
 });
 ///////////////////////////////////////////////////////////////////////////////
@@ -106,18 +107,29 @@ $('.table-add').click(function () {
   var e ="<td class='col_td' contenteditable='false' id='desc_"+serial+"'></td><td class='col_td' contenteditable='false' id='no_item_"+serial+"'></td>";
   var f ="<td class='col_td' contenteditable='false' id='quan_"+serial+"' value=3 id='quan_td'>";
   var g =document.getElementById("quan_1").innerHTML;
+  let g1='id="quantity_1"';
+  let g2='id="quantity_'.concat(serial+'"');
+  let gg=g.replace(g1,g2);
   var h ="<td class='col_td' contenteditable='false' id='price_"+serial+"'></td><td class='col_td' contenteditable='false' id='total_"+serial+"' required></td><td class='col_td' id='remove_td'>";
   var i =document.getElementById("remove_td").innerHTML+"</td></tr>";
-
-  var my_row = a+b+cc+d+e+f+g+h+i;
+  var my_row = a+b+cc+d+e+f+gg+h+i;
   $TABLE.find('table').append(my_row); //(trString());
+
   var lastTr = $TABLE.find('table tr').last();
+  lastTr.addEventListener("change", (e) =>//, false);
+{
+  id = e.target.id;
+  s = e.target.id.split("_");
+	alert(s);
+	select_item(s);
+});
+	alert(lastTr.find('.button_remove'));
   $('.select_item').select2({
     //  placeholder: '',
     allowClear: true
   });
   lastTr.find('.button_remove').click(removeFunc);
-  lastTr.find('.mdb-select').materialSelect();
+//  lastTr.find('.mdb-select').materialSelect();
 });  
 //  ################ ################  ################  ################  ################  
 
