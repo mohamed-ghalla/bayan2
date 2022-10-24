@@ -18,7 +18,6 @@ function select_item(s){
   else if(s[0] == "quantity"){
 	$(`#quan_${s[1]}`).val($(`#quantity_${s[1]}`).val());
 	var str = $(`#quantity_${s[1]}`).attr('id');
-	  alert(str);
 	var x = str.split("_");
 	var y = x[1];
 	$('#total_'+y).text((Number($('#price_'+y).text()) * Number($('#quantity_'+y).val())).toPrecision(4));
@@ -31,38 +30,6 @@ function removeFunc () {
   $(this).parents('tr').detach();
   //serial--;
 };
-//  ################ ################  ################  ################  ################  
-//
-//var x = document.getElementById("select_item").addEventListener("change", selectFunction.bind(this),  false);
-
-//function selectFunction(element){
-//  var y = document.getElementById("select_item");
-//  alert("1");
-//  //    $(`#code_${serial}`).val($("#select_item option:selected").val());
-//  var str = $("#select_item option:selected").val();
-//  var res = str.split("-");
-//  var x = res[4];
-//  alert("2");
-//  $(`#code_${x}`).text(res[0]);
-//  $(`#desc_${x}`).text(res[1]);
-//  $(`#no_item_${x}`).text(res[2]);
-//  $(`#price_${x}`).text(res[3]);
-//  $(`#total_${x}`).text((Number($('#price_'+x).text()) * Number($('#quantity_'+x).val())).toPrecision(4));
-//}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//document.getElementById("quantity_1").addEventListener("change", totalFunction.bind(this), false);
-
-//function totalFunction(element){
-////$('#total_'+serial).text(Number($('#price_'+serial).text()) * Number($('#quantity_'+serial).text()));
-//$("#quan_1").val($("#quantity_1").val());
-//var str = $("#quantity_1").attr('id');
-//var x = str.split("_");
-//var y = x[1];
-//$('#total_'+y).text((Number($('#price_'+y).text()) * Number($('#quantity_'+y).val())).toPrecision(4));
-//}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
 var $TABLE = $("#table");
 var $BTN = $('#export-btn');
 var $EXPORT = $('#export');
@@ -84,14 +51,6 @@ $('#my_form').submit(function(){
   return true;
 });
 //// ############################################################
-//  ################ ################  ################  ################  ################  
-//var trString = function(){
-//  var templateString = document.getElementById("template_Row").innerHTML;
-//  serial++;
-//  alert("serial= ", serial);
-  
-//  return templateString ;
-//};
 //  ################ ################  ################  ################  ################  
 
 $('.table-add').click(function () {
@@ -116,19 +75,19 @@ $('.table-add').click(function () {
   $TABLE.find('table').append(my_row); //(trString());
 
   var lastTr = $TABLE.find('table tr').last();
-  lastTr.addEventListener("change", (e) =>//, false);
-{
-  id = e.target.id;
-  s = e.target.id.split("_");
-	alert(s);
-	select_item(s);
-});
-	alert(lastTr.find('.button_remove'));
+  lastTr.find('.button_remove').click(removeFunc);
+  lastTr.addEventListener("change", e , false);
+//{
+//  id = e.target.id;
+//  s = e.target.id.split("_");
+//	alert(s);
+//	select_item(s);
+//});
+//	alert(lastTr.find('.button_remove'));
   $('.select_item').select2({
     //  placeholder: '',
     allowClear: true
   });
-  lastTr.find('.button_remove').click(removeFunc);
 //  lastTr.find('.mdb-select').materialSelect();
 });  
 //  ################ ################  ################  ################  ################  
@@ -177,3 +136,43 @@ $('.table-add').click(function () {
   };
 //});
 
+//  ################ ################  ################  ################  ################  
+//
+//var x = document.getElementById("select_item").addEventListener("change", selectFunction.bind(this),  false);
+
+//function selectFunction(element){
+//  var y = document.getElementById("select_item");
+//  alert("1");
+//  //    $(`#code_${serial}`).val($("#select_item option:selected").val());
+//  var str = $("#select_item option:selected").val();
+//  var res = str.split("-");
+//  var x = res[4];
+//  alert("2");
+//  $(`#code_${x}`).text(res[0]);
+//  $(`#desc_${x}`).text(res[1]);
+//  $(`#no_item_${x}`).text(res[2]);
+//  $(`#price_${x}`).text(res[3]);
+//  $(`#total_${x}`).text((Number($('#price_'+x).text()) * Number($('#quantity_'+x).val())).toPrecision(4));
+//}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//document.getElementById("quantity_1").addEventListener("change", totalFunction.bind(this), false);
+
+//function totalFunction(element){
+////$('#total_'+serial).text(Number($('#price_'+serial).text()) * Number($('#quantity_'+serial).text()));
+//$("#quan_1").val($("#quantity_1").val());
+//var str = $("#quantity_1").attr('id');
+//var x = str.split("_");
+//var y = x[1];
+//$('#total_'+y).text((Number($('#price_'+y).text()) * Number($('#quantity_'+y).val())).toPrecision(4));
+//}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  ################ ################  ################  ################  ################  
+//var trString = function(){
+//  var templateString = document.getElementById("template_Row").innerHTML;
+//  serial++;
+//  alert("serial= ", serial);
+  
+//  return templateString ;
+//};
