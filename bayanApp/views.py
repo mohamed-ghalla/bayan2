@@ -86,8 +86,7 @@ def home(request):
 
         unread_transactions = Transaction.objects.filter(t_state = "unread", VEND_CODE=vendor.VEND_CODE)
         t_count = Transaction.objects.all().count()
-        print(request.user.VEND_CODE)
-        return render(request, 'home.html', {'un_transactions':unread_transactions, 't_count':t_count, "person":user.person_type, "p_type":p_type})
+        return render(request, 'home.html', {'un_transactions':unread_transactions, 't_count':t_count, "person":user.person_type, "p_type":p_type, "vendor":vendor})
     if user.is_superuser :
         return redirect('/admin')
     return render(request, 'home.html', {"person":user.person_type, "p_type":p_type})
@@ -139,6 +138,9 @@ def resetPassword(request):
 @allowed_users(allowed_roles=[_('vendors')])
 def orderXo(request):
     form = OrderForm()
+    print("1")
+    vendor = Vendor.objects.get(user = request.user)
+    print("2")
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
@@ -149,21 +151,16 @@ def orderXo(request):
             print("before form save")
 #            data = eval(table_data)
             form.save()
-            print("form saved")
             order = Order_MS_VCHR_XO.objects.get(order_no = request.POST.get("order_no"))
             vendor = Vendor.objects.get(VEND_CODE=order.VEND_CODE)
             order.vendor = vendor
-            print("save order")
             order.save()
             return redirect('print_order/'+request.POST.get("order_no")+'/')
     order_no = datetime.now().strftime("%y%m%d%H%M%S")
-    print(request.user.VEND_CODE)
-    items = Product.objects.filter(VEND_CODE=request.user.VEND_CODE)
-#    print(items[0].PACK_ID)
-#    print(items[0].UNIT_DESC)
+    items = Product.objects.filter(VEND_CODE=vendor.VEND_CODE)
     context = {
             'form':form,
-            'vendor':Vendor.objects.get(VEND_CODE=request.user.VEND_CODE),#request.user.vendor,
+            'vendor':Vendor.objects.get(VEND_CODE=vendor.VEND_CODE),#request.user.vendor,
             'items':items,
             'order_no':order_no,
             'date':datetime.now().strftime("%y-%m-%d %H:%M:%S"),
@@ -207,7 +204,7 @@ def listAllOrders(request):
 @allowed_users(allowed_roles=[_('vendors'), _('sales')])
 def listOrders(request, VEND_CODE):
     if request.user.person_type == _("Vendor") :
-        if request.user.VEND_CODE != VEND_CODE:
+        if Vendor.objects.get(user=request.user).VEND_CODE != VEND_CODE:
             return redirect('my403')
     try:
         vendor = Vendor.objects.get(VEND_CODE=VEND_CODE)
@@ -373,7 +370,7 @@ def listProducts(request, VEND_CODE):
     user = request.user
     context = {}
     if user.person_type == _("Vendor"):
-        if user.VEND_CODE != VEND_CODE:
+        if Vendor.objects.get(user=user).VEND_CODE != VEND_CODE:
             return redirect('my403')
     try:
         vendor = Vendor.objects.get(VEND_CODE=VEND_CODE)

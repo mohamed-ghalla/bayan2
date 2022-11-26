@@ -59,20 +59,20 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'profile'%}">{% trans "Profile" %}</a>
-        </li>
+	</li>
         {% if request.user.person_type == v %}
-	  {% if request.user.VEND_CODE %}
+	  {% if vendor.VEND_CODE %}
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">{% trans "Orders" %}</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="{% url 'order' %}">{% trans "New Order" %}</a>
-                <a class="dropdown-item" href="{% url 'list_orders' VEND_CODE=request.user.VEND_CODE %}">{% trans "List Orders" %}</a>
+                <a class="dropdown-item" href="{% url 'list_orders' VEND_CODE=vendor.VEND_CODE %}">{% trans "List Orders" %}</a>
               </div>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">{% trans "Products" %}</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{% url 'list_products' VEND_CODE=request.user.VEND_CODE %}">{% trans "List Products" %}</a>
+                <a class="dropdown-item" href="{% url 'list_products' VEND_CODE=vendor.VEND_CODE %}">{% trans "List Products" %}</a>
               </div>
             </li>
 	  {% endif %}

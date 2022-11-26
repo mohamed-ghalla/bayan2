@@ -58,7 +58,7 @@
 	  <td>
             <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.sign_auth.url }}`)' data-toggle="modal" data-target="#img-modal" >{% trans "show" %}</a>
           </td>
-          <td><a class="btn btn-sm btn-primary noprint" id="print_order" onclick="printFunc(`{{user.sign_auth.url}}`)">
+          <td><a class="btn btn-sm btn-primary noprint" id="print_sign_auth" url="{{user.sign_auth.url}}">
 	    <i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
 	  </td>
         </tr>
@@ -70,7 +70,7 @@
           <td>
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.trade_book.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>	  
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{ user.trade_book.url }}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_trade_book" url="{{ user.trade_book.url }}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -82,7 +82,7 @@
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.chamber_book.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
 
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{ user.chamber_book.url }}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_chamber_book" url="{{ user.chamber_book.url }}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -95,7 +95,7 @@
 	  <td>
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.trademark.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>	  
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{ user.trademark.url }}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_trademark" url="{{ user.trademark.url }}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -108,7 +108,7 @@
 	  <td>
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.import_license.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.import_license.url}}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_import_license" url="{{user.import_license.url}}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -121,7 +121,7 @@
 	  <td>
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.healthy_preview.url }}`)'data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.healthy_preview.url}}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_healthy_preview" url="{{user.healthy_preview.url}}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -134,7 +134,7 @@
 	  <td>
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.agency_book.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.agency_book.url}}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_agency_book" url="{{user.agency_book.url}}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -147,7 +147,7 @@
 	  <td>
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.varieties_revealed.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
-          <td><a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.varieties_revealed.url}}`)"><i
+          <td><a class="btn btn-sm btn-primary noprint" id="print_varieties_revealed" url="{{user.varieties_revealed.url}}"><i
                 class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -159,7 +159,7 @@
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.federation_of_associations.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
           <td>
-	    <a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.federation_of_associations.url}}`)">
+	    <a class="btn btn-sm btn-primary noprint" id="print_federation_association" url="{{user.federation_of_associations.url}}">
 	      <i class="fa fa-print ml-2"></i>{% trans "Print" %}</a></td>
         </tr>
         {% endif %}
@@ -171,7 +171,7 @@
             <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.customs_declaration.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
           <td>
-            <a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.customs_declaration.url}}`)"><i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
+            <a class="btn btn-sm btn-primary noprint" id="print_customs_declaration" url="{{user.customs_declaration.url}}"><i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
           </td>	  
         </tr>
         {% endif %}
@@ -183,13 +183,13 @@
 	    <a class="btn btn-sm btn-primary noprint" onclick='show_img(`{{ user.industrial_facility.url }}`)' data-toggle="modal" data-target="#img-modal">{% trans "show" %}</a>
 	  </td>
 	  <td>
-	    <a class="btn btn-sm btn-primary noprint" onclick="printFunc(`{{user.industrial_facility.url}}`)"><i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
+	    <a class="btn btn-sm btn-primary noprint" id="print_industrial_facility" url="{{user.industrial_facility.url}}"><i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
 	  </td>	  
         </tr>
         {% endif %}
 	
       </table>
-      <a class="btn btn-primary noprint" id="print_page_id" onclick="window.print()"><i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
+      <a class="btn btn-primary noprint" id="print_page_id" ><i class="fa fa-print ml-2"></i>{% trans "Print" %}</a>
     </div>
   </div>
 </section>
@@ -208,7 +208,7 @@
     </div>
   </div>
 </div>
-
+<script src="{% static 'js/print.js' %}"></script>
 <script src="https://github.com/pipwerks/PDFObject/blob/master/pdfobject.min.js"></script>
 <script>
   function printFunc(name) {

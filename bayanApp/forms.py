@@ -40,7 +40,7 @@ class SignUpForm(UserCreationForm):
 #    phone            = forms.CharField   (required=True, label=_("Phone")) 
     phone     = forms.CharField   (required=True, label=_("Phone"))
     VEND_DESC_ARABIC = forms.CharField   (required=True, label=_("The trade name of the company"))
-    type_of_supply   = forms.ChoiceField (required=True, widget=forms.Select, choices = supply_choices, label=_("Type of Supply"))
+    type_of_supply   = forms.ChoiceField (required=False, initial=_('not vendor'), widget=forms.Select, choices = supply_choices, label=_("Type of Supply"))
     person_type      = forms.ChoiceField (required=True, initial=_('Vendor'), widget=forms.Select, choices = person_choices, label=_("Person Type")) 
 #    person_type      = forms.ChoiceField (required=True, widget=forms.Select, choices = person_choices, label=_("Person Type"), initial=_('Vendor'))
     password1        = forms.CharField   (required=True, max_length=32, widget=forms.PasswordInput, label=_('password1'))

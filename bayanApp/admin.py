@@ -4,7 +4,7 @@ from .models import User, Vendor, Sales, Accounts, Product, Location, Order_MS_V
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.admin import UserAdmin as UA
 from .forms import SignUpForm, CustomerForm
-
+from django import forms
 # Register your models here.
 #class UserAdmin(admin.ModelAdmin):
 #    pass
@@ -18,14 +18,10 @@ admin.site.site_header = _('Bayan Co. Administration')
 
 #admin.site.register(User, UA)
 #class UserAdmin(UA):
+
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-#    form = SignUpForm #CustomerForm
-#    fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'phone', 'VEND_DESC_ARABIC', 'email', 'person_type', 'type_of_supply', 
-#            'is_staff', 'is_superuser', 'is_active', 'date_joined', 'profile_pic', 'groups', 
-#            'sign_auth', 'trade_book', 'chamber_book', 'trademark', 'import_license', 'healthy_preview', 'agency_book', 
-#            'varieties_revealed', 'federation_of_associations', 'industrial_facility', 'customs_declaration']
-
+        
     search_fields = ('username', 'phone')
 
     list_display = ('username', 'id', 'first_name', 'last_name', 'email', 
@@ -48,10 +44,9 @@ class UserAdmin(admin.ModelAdmin):
 
         else:
             self.form = SignUpForm
-            self.fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'phone', 'VEND_DESC_ARABIC', 'email', 'person_type', 'type_of_supply',
+            self.fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'phone', 'VEND_DESC_ARABIC', 'email', 'person_type',# 'type_of_supply',
             'is_staff', 'is_superuser', 'is_active', 'date_joined', 'profile_pic', 'groups',
-            'sign_auth', 'trade_book', 'chamber_book', 'trademark', 'import_license', 'healthy_preview', 'agency_book',
-            'varieties_revealed', 'federation_of_associations', 'industrial_facility', 'customs_declaration']
+            ]
             
         return super(UserAdmin, self).get_form(request, obj, **kwargs)
 #    def add_view(self, request, extra_content=Nona):

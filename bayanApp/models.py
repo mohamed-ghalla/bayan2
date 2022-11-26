@@ -71,10 +71,10 @@ class Vendor(models.Model):
 
 class Sales(models.Model):
     def __str__(self):
-        return self.user
+        return self.user.username
 
     user             = models.ForeignKey(User, null=True, on_delete=models.CASCADE, verbose_name=_('User')) 
-    sales_code        = models.IntegerField(unique = True, verbose_name=_('sales_code'))
+    sales_code       = models.IntegerField(unique = True, verbose_name=_('sales_code'))
     class Meta:
         verbose_name =        _('Sale')
         verbose_name_plural = _('Sales')
@@ -95,7 +95,7 @@ class Product(models.Model):
     def __str__(self):
         return ( self.ARABIC_NAME)
     
-    ID          = models.CharField(auto_created=True, max_length=8, blank=False, verbose_name=_('ID'))
+#    ID          = models.CharField(auto_created=True, max_length=8, blank=False, verbose_name=_('ID'))
     VEND_CODE   = models.IntegerField(null=True, verbose_name=_('VEND_CODE'))
     PACK_ID     = models.IntegerField(null=True, verbose_name=_('PACK_ID'))
     NO_OF_ITEMS = models.IntegerField(null=True, verbose_name=_('NO_OF_ITEMS'))

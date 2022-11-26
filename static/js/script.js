@@ -80,10 +80,8 @@ $('.table-add').click(function () {
 //{
 //  id = e.target.id;
 //  s = e.target.id.split("_");
-//	alert(s);
 //	select_item(s);
 //});
-//	alert(lastTr.find('.button_remove'));
   $('.select_item').select2({
     //  placeholder: '',
     allowClear: true
@@ -147,7 +145,6 @@ $('.table-add').click(function () {
 //  var str = $("#select_item option:selected").val();
 //  var res = str.split("-");
 //  var x = res[4];
-//  alert("2");
 //  $(`#code_${x}`).text(res[0]);
 //  $(`#desc_${x}`).text(res[1]);
 //  $(`#no_item_${x}`).text(res[2]);

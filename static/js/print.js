@@ -25,7 +25,6 @@ document.addEventListener('click',(e) =>
 	}
 	else if (id.split("_")[0] == "show"){
 		if (name.endsWith('.pdf')) {
-			alert(path);
 			window.open(path);
 //	    		$("#img_div").html(`<embed src=`+path+` frameborder="0" width="100%" height="600px">`);
 		}
